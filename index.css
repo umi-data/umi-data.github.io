@@ -1,0 +1,17 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* 40% opacity black */
+  z-index: 1; /* Make sure it's behind the text */
+  transition: opacity 1s;
+}
+
+.hero-body,
+.hero-head,
+.hero-foot {
+  z-index: 2; /* Ensure text is above the overlay */
+  transition: opacity 1s;
+}

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMI Robot Dataset Community</title>
+
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    <!-- Highlight.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./index.css">
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+
+    <script>hljs.highlightAll();</script>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <!-- Logo Placeholder -->
+            <a class="navbar-item" href="#">
+                <img src="logo.png" alt="Logo" style="max-height: 3rem;"> <!-- Replace with your logo -->
+                <span class="is-size-4 has-text-weight-bold">UMI</span>
+            </a>
+
+            <!-- Mobile Hamburger Menu -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="#tasks">
+                    Tasks
+                </a>
+
+                <a class="navbar-item" href="#data-format">
+                    Data Format
+                </a>
+
+                <a class="navbar-item" href="#contact">
+                    Contact
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-light"
+                            href="https://github.com/real-stanford/universal_manipulation_interface/tree/main">
+                            Download
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero is-link is-fullheight video" style="overflow: hidden; position:relative;">
+        <div class="hero-video" style="height: 100%; width: 177.77777778vh; min-width: 100%;min-height: 56.25vw;">
+            <video playsinline autoplay muted loop>
+                <source src=" ./teaser.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-video is-hidden-tablet is-inline-block-mobile"
+            style="height: 154.28571428vw; width: 100%; min-width:64.81481481vh;min-height:100%;">
+            <video playsinline autoplay muted loop>
+                <source src=" ./teaser.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="overlay"></div>
+
+
+
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1 publication-title is-size-1-mobile" style="font-size: 8rem;">
+                    Data is better when universally sharable
+                </h1>
+                <!-- <h2 class="subtitle"></h2> -->
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section is-small" id="overview">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-four-fifths has-text-justified is-hidden-mobile">
+                    <h2 class="subtitle ">
+                        UMI is a physical and policy interface that allows robot data to be shared between many robots.
+                        With just a GoPro and a 3D printed gripper, any new robot platform can get up and running with
+                        UMI policies without any robot-specific data collection!
+                    </h2>
+                    <br>
+                    <h2 class="subtitle">
+                        <strong>The best part?</strong>
+                        With just a GoPro and a 3D printed gripper, any new robot platform can get up and running with
+                        UMI policies without any robot-specific data collection!
+                    </h2>
+                </div>
+
+                <div class="column is-four-fifths is-hidden-tablet has-text-justified-mobile">
+                    <p>
+                        UMI is a physical and policy interface that allows robot data to be shared between many robots.
+                    </p>
+                    <br>
+                    <p>
+                        <strong>The best part?</strong>
+                        With just a GoPro and a 3D printed gripper, any new robot platform can get up and running with
+                        UMI policies without any robot-specific data collection!
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="columns is-centered">
+                <div class="column is-four-fifths has-text-justified is-hidden-mobile">
+
+                    <!-- Summary Statistics Panel -->
+                    <div class="container">
+                        <div class="box" style="box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);">
+                            <div class="level">
+                                <!-- Number of Tasks -->
+                                <div class="level-item has-text-centered">
+                                    <div>
+                                        <p class="heading">Number of Tasks</p>
+                                        <p class="title">35</p> <!-- Placeholder number -->
+                                    </div>
+                                </div>
+
+                                <!-- Number of Environments -->
+                                <div class="level-item has-text-centered">
+                                    <div>
+                                        <p class="heading">Number of Environments</p>
+                                        <p class="title">12</p> <!-- Placeholder number -->
+                                    </div>
+                                </div>
+
+                                <!-- Number of Trajectories -->
+                                <div class="level-item has-text-centered">
+                                    <div>
+                                        <p class="heading">Number of Trajectories</p>
+                                        <p class="title">2,560</p> <!-- Placeholder number -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Data Format Panel -->
+    <section class="section" id="data-format">
+        <div class="container content">
+
+            <h2 id="-dataset-format">📚 Dataset Format</h2>
+            <p>UMI has multiple tiers of data storage formats:</p>
+            <ul>
+                <li>GoPro data: Just a folder of GoPro mp4s :)</li>
+                <li>SLAM data: Output of ORB_SLAM3 pipeline (volatile)</li>
+                <li>Zarr data: A single zip file optimized for fast random reading for training.</li>
+            </ul>
+            <h3 id="zarr-data-format">Zarr data format</h3>
+            <p>Following <a href="https://diffusion-policy.cs.columbia.edu/">Diffusion Policy</a>, UMI uses <a
+                    href="https://zarr.dev/">Zarr</a> as the container for training datasets. Zarr is similar to <a
+                    href="https://docs.hdfgroup.org/hdf5/v1_14/_intro_h_d_f5.html">HDF5</a> but offers better
+                flexibility for storage backends, chunking, compressors, and parallel access. </p>
+            <p>Conceptually, Zarr can be understood as a nested <code>dict</code> of &quot;numpy arrays&quot;. For
+                example, here is the structure of the <code>example_demo_session</code> dataset.</p>
+            <pre><code class="lang-python">import Zarr
+from diffusion_policy.codecs.imagecodecs_numcodecs import register_codecs, JpegXl
+register_codecs()
+
+root = zarr.open('example_demo_session/dataset.zarr.zip')
+print(root.tree())
+&gt;&gt;&gt;
+/
+ ├── data
+ │   ├── camera0_rgb (<span class="hljs-number">2315</span>, <span class="hljs-number">224</span>, <span class="hljs-number">224</span>, <span class="hljs-number">3</span>) uint8
+ │   ├── robot0_demo_end_pose (<span class="hljs-number">2315</span>, <span class="hljs-number">6</span>) float64
+ │   ├── robot0_demo_start_pose (<span class="hljs-number">2315</span>, <span class="hljs-number">6</span>) float64
+ │   ├── robot0_eef_pos (<span class="hljs-number">2315</span>, <span class="hljs-number">3</span>) float32
+ │   ├── robot0_eef_rot_axis_angle (<span class="hljs-number">2315</span>, <span class="hljs-number">3</span>) float32
+ │   └── robot0_gripper_width (<span class="hljs-number">2315</span>, <span class="hljs-number">1</span>) float32
+ └── meta
+     └── episode_ends (<span class="hljs-number">5</span>,) int64
+</code></pre>
+            <h4 id="replaybuffer">ReplayBuffer</h4>
+            <p>We implemented the <code>ReplayBuffer</code> class to access Zarr data conveniently.</p>
+            <pre><code class="lang-python">from diffusion_policy.common.replay_buffer import <span class="hljs-symbol">ReplayBuffer</span>
+
+replay_buffer = <span class="hljs-symbol">ReplayBuffer</span>.create_from_group(root)
+replay_buffer.n_episodes
+&gt;&gt;&gt; <span class="hljs-number">5</span>
+
+# reading an episode
+ep = replay_buffer.get_episode(<span class="hljs-number">0</span>)
+ep.keys()
+&gt;&gt;&gt; dict_keys([<span class="hljs-string">'camera0_rgb'</span>, <span class="hljs-string">'robot0_demo_end_pose'</span>, <span class="hljs-string">'robot0_demo_start_pose'</span>, <span class="hljs-string">'robot0_eef_pos'</span>, <span class="hljs-string">'robot0_eef_rot_axis_angle'</span>, <span class="hljs-string">'robot0_gripper_width'</span>])
+
+ep[<span class="hljs-string">'robot0_gripper_width'</span>]
+&gt;&gt;&gt;
+array([[<span class="hljs-number">0.07733118</span>],
+       [<span class="hljs-number">0.07733118</span>],
+       [<span class="hljs-number">0.07734068</span>],
+...
+       [<span class="hljs-number">0.08239228</span>],
+       [<span class="hljs-number">0.08236252</span>],
+       [<span class="hljs-number">0.0823558</span> ]], dtype=float32)
+</code></pre>
+            <h4 id="data-group">Data Group</h4>
+            <p>In <code>root[&#39;data&#39;]</code> &quot;dict,&quot; we have a group of arrays containing demonstration
+                episodes concatenated along the first dimension (time/step). In this dataset, we have 2315 steps across
+                five episodes. In UMI, data has a frame rate of 60Hz (59.94Hz), matching the recording frame rate of
+                GoPros. All arrays in <code>root[&#39;data&#39;]</code> must have the same size in their first (time)
+                dimension.</p>
+            <pre><code class="lang-python">root[<span class="hljs-string">'data'</span>][<span class="hljs-symbol">'robot0_eef_pos'</span>]
+&gt;&gt;&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">zarr.core.Array</span> '/<span class="hljs-attr">data</span>/<span class="hljs-attr">robot0_eef_pos</span>' (<span class="hljs-attr">2315</span>, <span class="hljs-attr">3</span>) <span class="hljs-attr">float32</span>&gt;</span></span>
+
+root[<span class="hljs-string">'data'</span>][<span class="hljs-symbol">'robot0_eef_pos'</span>][<span class="hljs-string">0</span>]
+&gt;&gt;&gt; array([ 0.1872826 , -0.35130176,  0.1859438 ], dtype=float32)
+
+root[<span class="hljs-string">'data'</span>][<span class="hljs-symbol">'robot0_eef_pos'</span>][<span class="hljs-string">:</span>]
+&gt;&gt;&gt;
+array([[ 0.1872826 , -0.35130176,  0.1859438 ],
+<span class="hljs-code">       [ 0.18733297, -0.3509169 ,  0.18603411],</span>
+<span class="hljs-code">       [ 0.18735182, -0.3503186 ,  0.18618457],</span>
+<span class="hljs-code">       ...,</span>
+<span class="hljs-code">       [ 0.12694108, -0.3326249 ,  0.13230264],</span>
+<span class="hljs-code">       [ 0.12649481, -0.3347473 ,  0.1347403 ],</span>
+<span class="hljs-code">       [ 0.12601827, -0.33651358,  0.13699797]], dtype=float32)</span>
+</code></pre>
+            <h4 id="metadata-group">Metadata Group</h4>
+            <p>How do we know the start and end of each episode? We store an integer array
+                <code>root[&#39;meta&#39;][&#39;episode_ends&#39;]</code> that contains each episode&#39;s
+                <code>end</code> index into <code>data</code> arrays.
+                For example, the first episode can be accessed with
+                <code>root[&#39;data&#39;][&#39;robot0_eef_pos&#39;][0:468]</code> and the second episode can be
+                accessed with <code>root[&#39;data&#39;][&#39;robot0_eef_pos&#39;][468:932]</code>.
+            </p>
+            <pre><code class="lang-python">root[<span class="hljs-string">'meta'</span>][<span class="hljs-symbol">'episode_ends'</span>][<span class="hljs-string">:</span>]
+&gt;&gt;&gt; array([ 468,  932, 1302, 1710, 2315])
+</code></pre>
+            <h4 id="data-array-chunking-and-compression">Data Array Chunking and Compression</h4>
+            <p>Note that all arrays in the dataset are of type <code>zarr.core.Array</code> instead of
+                <code>numpy.ndarray</code>. While offering similar API to numpy arrays, Zarr arrays are optimized for
+                fast on-disk storage with <em>chunked compression</em>. For example, camera images
+                <code>root[&#39;data&#39;][&#39;camera0_rgb&#39;]</code> is stored with chunk size
+                <code>(1, 224, 224, 3)</code> and <code>JpegXl</code> compression. When reading from a Zarr array, a
+                chunk of data is loaded from disk storage and decompressed to a numpy array.
+            </p>
+            <p>For optimal performance, the chunk size has to be chosen carefully. A chunk size too big means that the
+                data loader will decompress the data more than necessary (e.g., chunks=(100, 224, 244, 3) will
+                decompress and discard 99 images when accessing [0]). In contrast, having the chunk size too small will
+                incur additional overhead and reduce compression rate (e.g., chunks=(1,14,14,3) means each image is
+                split into 256 chunks).</p>
+            <pre><code class="lang-python">root[<span class="hljs-string">'data'</span>][<span class="hljs-symbol">'camera0_rgb'</span>]
+&gt;&gt;&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">zarr.core.Array</span> '/<span class="hljs-attr">data</span>/<span class="hljs-attr">camera0_rgb</span>' (<span class="hljs-attr">2315</span>, <span class="hljs-attr">224</span>, <span class="hljs-attr">224</span>, <span class="hljs-attr">3</span>) <span class="hljs-attr">uint8</span>&gt;</span></span>
+
+root[<span class="hljs-string">'data'</span>][<span class="hljs-symbol">'camera0_rgb'</span>].chunks # chunk size
+&gt;&gt;&gt; (1, 224, 224, 3)
+
+root[<span class="hljs-string">'data'</span>][<span class="hljs-symbol">'camera0_rgb'</span>].nchunks # number of chunks
+&gt;&gt;&gt; 2315
+
+root[<span class="hljs-string">'data'</span>][<span class="hljs-symbol">'camera0_rgb'</span>].compressor
+&gt;&gt;&gt; JpegXl(decodingspeed=None, distance=None, effort=None, index=None, keeporientation=None, level=99, lossless=False, numthreads=1, photometric=None, planar=None, usecontainer=None)
+
+root[<span class="hljs-string">'data'</span>][<span class="hljs-symbol">'camera0_rgb'</span>][<span class="hljs-string">0</span>]
+&gt;&gt;&gt;
+array([[[ 7,  6, 15],
+<span class="hljs-code">        [ 7,  6, 15],</span>
+<span class="hljs-code">        [ 4,  4, 13],</span>
+<span class="hljs-code">        ...,</span>
+<span class="hljs-code">        [ 6,  7, 15],</span>
+<span class="hljs-code">        [ 4,  7, 14],</span>
+<span class="hljs-code">        [ 3,  6, 13]],</span>
+
+<span class="hljs-code">       ...,</span>
+
+<span class="hljs-code">       [[ 0,  0,  0],</span>
+<span class="hljs-code">        [ 0,  0,  0],</span>
+<span class="hljs-code">        [ 0,  0,  0],</span>
+<span class="hljs-code">        ...,</span>
+<span class="hljs-code">        [ 0,  0,  0],</span>
+<span class="hljs-code">        [ 0,  0,  0],</span>
+<span class="hljs-code">        [ 0,  0,  0]]], dtype=uint8)</span>
+</code></pre>
+            <p>We use a relatively large chunk size for low-dimensional data. Since these data are cached into a numpy
+                array inside <code>UmiDataset,</code> no read IOPS overhead is introduced.</p>
+            <pre><code class="lang-python">root[<span class="hljs-string">'data'</span>][<span class="hljs-symbol">'robot0_eef_pos'</span>].chunks
+&gt;&gt;&gt; (468, 3)
+
+root[<span class="hljs-string">'data'</span>][<span class="hljs-symbol">'robot0_eef_pos'</span>].compressor # uncompressed chunks
+&gt;&gt;&gt; None
+</code></pre>
+            <h4 id="in-memory-compression">In-memory Compression</h4>
+            <p>During training, streaming datasets from a network drive is often bottlenecked by <a
+                    href="https://en.wikipedia.org/wiki/IOPS">IOPS</a>, especially when multiple GPUs/nodes are reading
+                from the same network drive. While loading the entire dataset to memory works around the IOPS
+                bottleneck, an uncompressed UMI dataset often does not fit in RAM.</p>
+            <p>We found streaming <em>compressed</em> datasets from RAM a good tradeoff between memory footprint and
+                read performance.</p>
+            <pre><code class="lang-python">root.store
+&gt;&gt;&gt; &lt;zarr.storage.ZipStore at <span class="hljs-number">0x76b73017d400</span>&gt;
+
+ram_store = zarr.MemoryStore()
+# load stored chunks in bytes directly to memory, without decompression
+zarr.convenience.copy_store(root.store, ram_store)
+ram_root = zarr.group(ram_store)
+print(ram_root.tree())
+&gt;&gt;&gt;
+/
+ ├── data
+ │   ├── camera0_rgb (<span class="hljs-number">2315</span>, <span class="hljs-number">224</span>, <span class="hljs-number">224</span>, <span class="hljs-number">3</span>) uint8
+ │   ├── robot0_demo_end_pose (<span class="hljs-number">2315</span>, <span class="hljs-number">6</span>) float64
+ │   ├── robot0_demo_start_pose (<span class="hljs-number">2315</span>, <span class="hljs-number">6</span>) float64
+ │   ├── robot0_eef_pos (<span class="hljs-number">2315</span>, <span class="hljs-number">3</span>) float32
+ │   ├── robot0_eef_rot_axis_angle (<span class="hljs-number">2315</span>, <span class="hljs-number">3</span>) float32
+ │   └── robot0_gripper_width (<span class="hljs-number">2315</span>, <span class="hljs-number">1</span>) float32
+ └── meta
+     └── episode_ends (<span class="hljs-number">5</span>,) int64
+
+
+# loading compressed data to RAM with ReplayBuffer
+ram_replay_buffer = ReplayBuffer.copy_from_store(
+    root.store,
+    zarr.MemoryStore()
+)
+ep = ram_replay_buffer.get_episode(<span class="hljs-number">0</span>)
+</code></pre>
+
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section class="section has-background-light" id="contact">
+        <div class="container">
+            <div class="content has-text-centered">
+                <h3 class="title is-4">Contact</h3>
+                <p>
+                    For questions or to have your UMI dataset listed on this website, please reach out to
+                    <a href="https://www.cs.columbia.edu/~huy/" target="_blank">Huy Ha</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+<footer>
+    <script>// JavaScript to handle tab switching
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.panel-tabs a');
+            const contents = document.querySelectorAll('.panel-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    tabs.forEach(item => item.classList.remove('is-active'));
+                    // Hide all content sections
+                    contents.forEach(content => content.classList.add('is-hidden'));
+
+                    // Add active class to clicked tab
+                    tab.classList.add('is-active');
+
+                    // Show the corresponding content
+                    const tabContent = document.getElementById(`${tab.dataset.tab}-content`);
+                    tabContent.classList.remove('is-hidden');
+                });
+            });
+        });
+    </script>
+</footer>
+
+</html>
