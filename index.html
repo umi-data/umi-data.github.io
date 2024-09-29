@@ -72,7 +72,6 @@
             "n_demos": 283,
             "n_envs": 1,
             "license": "MIT",
-            "citation": ""
         },
         {
             "task": "Pour dice",
@@ -84,7 +83,6 @@
             "n_demos": 145,
             "n_envs": 1,
             "license": "MIT",
-            "citation": ""
         },
         {
             "task": "Strap wires with velcro tape",
@@ -96,7 +94,6 @@
             "n_demos": 193,
             "n_envs": 1,
             "license": "MIT",
-            "citation": ""
         },
         {
             "task": "Flip bagel in the wild",
@@ -109,8 +106,40 @@
             "n_demos": 274,
             "n_envs": 7,
             "license": "MIT",
-            "citation": ""
-        }
+        },
+        {
+            "Project": "UMI on Legs",
+            "Project Link": "https://umi-on-legs.github.io/",
+            "task": "Kettlebell Pushing",
+            "data_links": {
+                "MP4": "#",
+                "Zarr": "#"
+            },
+            "obs": ["Image", "Proprio"],
+            "actions": ["6 DoF Movement", "Gripper Width"],
+            "n_demos": 25,
+            "n_envs": 1,
+            "contact": "huyha@stanford.edu",
+            "license": "MIT",
+            "citation": `@inproceedings{ha2024umilegs,
+  title={{UMI} on Legs: Making Manipulation Policies Mobile with Manipulation-Centric Whole-body Controllers},
+  author={Huy Ha and Yihuai Gao and Zipeng Fu and Jie Tan and Shuran Song},
+  year={2024},
+  booktitle={Proceedings of the 2024 Conference on Robot Learning},
+}`
+        },
+        {
+            "task": "Tennis Ball Basket Toss",
+            "data_links": {
+                "MP4": "#",
+                "Zarr": "#"
+            },
+            "obs": ["Image", "Proprio"],
+            "actions": ["6 DoF Movement", "Gripper Width"],
+            "n_demos": 500,
+            "n_envs": 1,
+            "license": "MIT",
+        },
         ];
 
         function generateTable(data) {
