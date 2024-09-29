@@ -23,9 +23,26 @@
     <script>hljs.highlightAll();</script>
 
     <script>
-        let tasks = {
-
+        let rows = [{
+            "Project": "UMI",
+            "Project Link": "https://umi-gripper.github.io/",
+            "task": "Cup Rearrangement",
+            "data_links": {
+                "MP4": "#", "Zarr": "#",
+            },
+            "obs": ["Image", "Proprio"],
+            "actions": ["6 DoF Movement", "Gripper Width"],
+            "n_demos": 1400,
+            "n_envs": 30,
+            "contact": "chuerpan@stanford.edu",
+            "license": "MIT",
+            "citation": `@inproceedings{chi2024universal,
+    title={Universal Manipulation Interface: In-The-Wild Robot Teaching Without In-The-Wild Robots},
+    author={Chi, Cheng and Xu, Zhenjia and Pan, Chuer and Cousineau, Eric and Burchfiel, Benjamin and Feng, Siyuan and Tedrake, Russ and Song, Shuran},
+    booktitle={Proceedings of Robotics: Science and Systems (RSS)},
+    year={2024}`
         }
+        ];
     </script>
 </head>
 
@@ -169,13 +186,13 @@
                     <thead>
                         <tr>
                             <th>Project Name</th>
+                            <th>Contact</th>
                             <th style="min-width: 200px;">Task</th>
+                            <th style="min-width: 100px;">Data Links</th>
                             <th>Obs</th>
                             <th>Actions</th>
                             <th style="min-width: 100px;"># Demos</th>
                             <th style="min-width: 100px;"># Envs</th>
-                            <th>Contact Person</th>
-                            <th>Data Format</th>
                             <th>License</th>
                             <th style="max-width: 400px;">Citation</th> <!-- Set max width for citation -->
                         </tr>
@@ -183,7 +200,9 @@
                     <tbody>
                         <tr>
                             <td><a href="https://umi-gripper.github.io/">UMI</a></td>
+                            <td><a href="mailto:chuerpan@stanford.edu">chuerpan@stanford.edu</a></td>
                             <td>Cup Rearrangement</td>
+                            <td>MP4, Zarr</td>
                             <td>
                                 <div class="tags are-normal">
                                     <span class="tag is-primary">Image</span>
@@ -198,8 +217,6 @@
                             </td>
                             <td>1400</td>
                             <td>30</td>
-                            <td><a href="mailto:chuerpan@stanford.edu">chuerpan@stanford.edu</a></td>
-                            <td>MP4, Zarr</td>
                             <td>MIT</td>
                             <td>
                                 <div style="max-width: 400px; overflow-x: auto;">
@@ -214,7 +231,9 @@
                         </tr>
                         <tr>
                             <td></td>
+                            <td><a href="mailto:chuerpan@stanford.edu">chuerpan@stanford.edu</a></td>
                             <td>Toss Sorting</td>
+                            <td>MP4, Zarr</td>
                             <td>
                                 <div class="tags are-normal">
                                     <span class="tag is-primary">Image</span>
@@ -229,15 +248,15 @@
                             </td>
                             <td>200</td>
                             <td>1</td>
-                            <td><a href="mailto:chuerpan@stanford.edu">chuerpan@stanford.edu</a></td>
-                            <td>MP4, Zarr</td>
                             <td>MIT</td>
                             <td>
                             </td>
                         </tr>
                         <tr>
                             <td></td>
+                            <td><a href="mailto:chuerpan@stanford.edu">chuerpan@stanford.edu</a></td>
                             <td>Cloth Folding</td>
+                            <td>MP4, Zarr</td>
                             <td>
                                 <div class="tags are-normal">
                                     <span class="tag is-primary">Image</span>
@@ -254,8 +273,6 @@
                             </td>
                             <td>400</td>
                             <td>1</td>
-                            <td><a href="mailto:chuerpan@stanford.edu">chuerpan@stanford.edu</a></td>
-                            <td>MP4, Zarr</td>
                             <td>MIT</td>
                             <td>
                             </td>
@@ -263,7 +280,9 @@
                         </tr>
                         <tr>
                             <td></td>
+                            <td><a href="mailto:chuerpan@stanford.edu">chuerpan@stanford.edu</a></td>
                             <td>Dish Washing</td>
+                            <td>MP4, Zarr</td>
                             <td>
                                 <div class="tags are-normal">
                                     <span class="tag is-primary">Image</span>
@@ -280,8 +299,6 @@
                             </td>
                             <td>400</td>
                             <td>1</td>
-                            <td><a href="mailto:chuerpan@stanford.edu">chuerpan@stanford.edu</a></td>
-                            <td>MP4, Zarr</td>
                             <td>MIT</td>
                             <td>
                             </td>
@@ -290,7 +307,9 @@
 
                         <tr></tr>
                         <td><a href="https://mani-wav.github.io/">ManiWAV</a></td>
+                        <td><a href="mailto:liuzeyi@stanford.edu">liuzeyi@stanford.edu</a></td>
                         <td>Bagel Flipping</td>
+                        <td>MP4, Zarr</td>
                         <td>
                             <div class="tags are-normal">
                                 <span class="tag is-primary">Image</span>
@@ -306,8 +325,6 @@
                         </td>
                         <td>300</td>
                         <td>5</td>
-                        <td><a href="mailto:liuzeyi@stanford.edu">liuzeyi@stanford.edu</a></td>
-                        <td>MP4, Zarr</td>
                         <td>MIT</td>
                         <td>
                             <div style="max-width: 400px; overflow-x: auto;">
@@ -336,17 +353,32 @@
             <div class="content">
                 <p>If you would like your data to be listed here, please provide the following information:</p>
                 <ul>
-                    <li><strong>Link to the data:</strong> A direct link to where the dataset can be accessed.</li>
+                    <li><strong>Project:</strong> The name of the project and link to the project website for additional
+                        context.</li>
+                    <li><strong>License:</strong> The licensing terms under which the data is distributed (e.g.,
+                        MIT, GPL, CC BY 4.0).</li>
+                    <li><strong>Citation:</strong> Information on how to properly cite the dataset if used.</li>
                     <li><strong>Contact person:</strong> The name and email of the individual responsible for the
                         dataset.</li>
-                    <li><strong>Project webpage:</strong> A link to the project’s main webpage for additional context.
+                    <li><strong>Tasks</strong>:
+                        <ul>
+                            <li><strong>Metadata:</strong> This includes the task name, the observations (e.g., Image,
+                                Proprio, Audio, Bimanual), and the actions (e.g., 6 DoF Movement, Gripper Width,
+                                Bimanual).</li>
+                            <li><strong>Link to Data:</strong> A direct link to where each of the data formats
+                                can be accessed. For instance, the link for MP4 might be a google drive link, while the
+                                link for
+                                a Zarr file might be hosted on the project's webserver. If you're unsure of which data
+                                format to use,
+                                consider
+                                using/extending the <a href="#data-format">UMI data format</a>.</li>
+                            <li><strong>Number of demonstrations:</strong> The number of demonstrations in the dataset.
+                            </li>
+                            <li><strong>Number of environments:</strong> The number of environments in which the data
+                                was
+                                collected.</li>
+                        </ul>
                     </li>
-                    <li><strong>Citation:</strong> Information on how to properly cite the dataset if used.</li>
-                    <li><strong>Data format:</strong> The format in which the data is provided. If you're unsure,
-                        consider
-                        using/extending the <a href="#data-format">UMI data format</a>.</li>
-                    <li><strong>License:</strong> The licensing terms under which the data is distributed (e.g., MIT,
-                        GPL, CC BY 4.0).</li>
                 </ul>
 
                 <p>Please send this information to <a href="mailto:huyha@stanford.edu">huyha@stanford.edu</a> for review
@@ -374,9 +406,9 @@
             <h2 id="-dataset-format">📚 Dataset Format</h2>
             <p>UMI has multiple tiers of data storage formats:</p>
             <ul>
-                <li>GoPro data: Just a folder of GoPro mp4s :)</li>
-                <li>SLAM data: Output of ORB_SLAM3 pipeline (volatile)</li>
-                <li>Zarr data: A single zip file optimized for fast random reading for training.</li>
+                <li><strong>GoPro</strong>: Just a folder of GoPro MP4s :)</li>
+                <li><strong>SLAM</strong> Output of ORB_SLAM3 pipeline (volatile)</li>
+                <li><strong>Zarr</strong> A single zip file optimized for fast random reading for training.</li>
             </ul>
             <h3 id="zarr-data-format">Zarr data format</h3>
             <p>Following <a href="https://diffusion-policy.cs.columbia.edu/">Diffusion Policy</a>, UMI uses <a
