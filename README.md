@@ -8,4 +8,5 @@ TODO:
 - [ ] Encourage people to reach out
 - [ ] Show how others have already tried to extend UMI (you can't say UMI without U and MI)
 
-Nice website design: https://remarkable.com/store/remarkable-paper/pro
+To add to website:
+https://fastumi.com/

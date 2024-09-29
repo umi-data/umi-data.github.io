@@ -30,7 +30,6 @@
 </head>
 
 <body>
-
     <!-- Navbar -->
     <nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
@@ -39,18 +38,14 @@
                 <img src="./logo.png" alt="Logo" style="max-height: 3rem;"> <!-- Replace with your logo -->
                 <span class="is-size-4 has-text-weight-bold">UMI</span>
             </a>
-
-            <!-- Mobile Hamburger Menu -->
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
         </div>
 
         <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
+            <div class="navbar-start is-hidden-touch"> <!-- Hidden on mobile -->
+                <a class="navbar-item" href="#principles">
+                    Principles
+                </a>
+
                 <a class="navbar-item" href="#tasks">
                     Tasks
                 </a>
@@ -58,24 +53,20 @@
                 <a class="navbar-item" href="#data-format">
                     Data Format
                 </a>
-
-                <a class="navbar-item" href="#contact">
-                    Contact
-                </a>
             </div>
 
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-light"
-                            href="https://github.com/real-stanford/universal_manipulation_interface/tree/main">
-                            Download
+                        <a class="button is-light" href="#list-your-data">
+                            List Your Data
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
+
 
     <!-- Hero Section -->
     <section class="hero is-link is-fullheight video" style="overflow: hidden; position:relative;">
@@ -134,43 +125,76 @@
                     </p>
                 </div>
             </div>
+        </div>
+    </section>
 
-
+    <!-- UMI Community Dataset Principles Section -->
+    <section class="section has-text-centered" id="principles">
+        <div class="container content box has-text-justified">
             <div class="columns is-centered">
-                <div class="column is-four-fifths has-text-justified is-hidden-mobile">
+                <div class="column is-four-fifths p-6">
+                    <h2>UMI Community Principles</h2>
+                    <h3>📈 No dataset is too small; small data adds up.</h3>
+                    <p>
+                        Even a simple, single-task dataset with 50 demonstrations is valuable. As long as you're happy
+                        to
+                        share it, we are happy to list it here.
+                        Every bit of data contributes to the community’s collective knowledge.
+                    </p>
 
-                    <!-- Summary Statistics Panel -->
-                    <div class="container">
-                        <div class="box" style="box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);">
-                            <div class="level">
-                                <!-- Number of Tasks -->
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading">Number of Tasks</p>
-                                        <p class="title">35</p> <!-- Placeholder number -->
-                                    </div>
-                                </div>
-
-                                <!-- Number of Environments -->
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading">Number of Environments</p>
-                                        <p class="title">12</p> <!-- Placeholder number -->
-                                    </div>
-                                </div>
-
-                                <!-- Number of Trajectories -->
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading">Number of Trajectories</p>
-                                        <p class="title">2,560</p> <!-- Placeholder number -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <h3>♻️ UMI is a constantly evolving design.</h3>
+                    <p>
+                        There’s no strict definition of UMI data. You are encouraged to contribute datasets even if they
+                        don’t follow the same hardware or data format.
+                        We welcome enhancements to the UMI design—be it new sensors (e.g., <a
+                            href="https://mani-wav.github.io/">ManiWav</a>),
+                        finger designs, or cameras (e.g., <a href="link-to-fastumi">fastUMI</a>).
+                        Even if your data is not directly transferable to the current UMI setup, it can still be useful
+                        for
+                        pretraining or other creative applications.
+                        If it can benefit the UMI community, it’s worth listing!
+                    </p>
                 </div>
             </div>
+        </div>
+    </section>
+
+
+
+    <!-- Listing Your Data Section -->
+    <section class="section" id="list-your-data">
+        <div class="container">
+            <h2 class="title is-3">📋 Listing Your Data</h2>
+
+            <div class="content">
+                <p>If you would like your data to be listed here, please provide the following information:</p>
+                <ul>
+                    <li><strong>Link to the data:</strong> A direct link to where the dataset can be accessed.</li>
+                    <li><strong>Contact person:</strong> The name and email of the individual responsible for the
+                        dataset.</li>
+                    <li><strong>Project webpage:</strong> A link to the project’s main webpage for additional context.
+                    </li>
+                    <li><strong>Citation:</strong> Information on how to properly cite the dataset if used.</li>
+                    <li><strong>Data format:</strong> The format in which the data is provided. If you're unsure,
+                        consider
+                        using/extending the <a href="#data-format">UMI data format</a>.</li>
+                    <li><strong>License:</strong> The licensing terms under which the data is distributed (e.g., MIT,
+                        GPL, CC BY 4.0).</li>
+                </ul>
+
+                <p>Please send this information to <a href="mailto:huyha@stanford.edu">huyha@stanford.edu</a> for review
+                    and
+                    inclusion in our listing.</p>
+            </div>
+
+            <!-- Disclaimer Callout -->
+            <article class="message is-warning">
+                <div class="message-body">
+                    <strong>Disclaimer:</strong> We only provide a list of references to existing data for researchers
+                    to easily search and find datasets. We do not own or host the datasets listed here. For questions
+                    about specific datasets, please reach out to the project owners directly.
+                </div>
+            </article>
         </div>
     </section>
 
@@ -276,11 +300,19 @@ array([[ 0.1872826 , -0.35130176,  0.1859438 ],
                 <code>(1, 224, 224, 3)</code> and <code>JpegXl</code> compression. When reading from a Zarr array, a
                 chunk of data is loaded from disk storage and decompressed to a numpy array.
             </p>
-            <p>For optimal performance, the chunk size has to be chosen carefully. A chunk size too big means that the
-                data loader will decompress the data more than necessary (e.g., chunks=(100, 224, 244, 3) will
-                decompress and discard 99 images when accessing [0]). In contrast, having the chunk size too small will
-                incur additional overhead and reduce compression rate (e.g., chunks=(1,14,14,3) means each image is
-                split into 256 chunks).</p>
+
+            <!-- Disclaimer Callout -->
+            <article class="message is-warning">
+                <div class="message-body">
+                    <strong>💡</strong> For optimal performance, the chunk size has to be chosen carefully. A
+                    chunk size too big means that the
+                    data loader will decompress the data more than necessary (e.g., chunks=(100, 224, 244, 3) will
+                    decompress and discard 99 images when accessing [0]). In contrast, having the chunk size too small
+                    will
+                    incur additional overhead and reduce compression rate (e.g., chunks=(1,14,14,3) means each image is
+                    split into 256 chunks).
+                </div>
+            </article>
             <pre><code class="lang-python">root[<span class="hljs-string">'data'</span>][<span class="hljs-symbol">'camera0_rgb'</span>]
 &gt;&gt;&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">zarr.core.Array</span> '/<span class="hljs-attr">data</span>/<span class="hljs-attr">camera0_rgb</span>' (<span class="hljs-attr">2315</span>, <span class="hljs-attr">224</span>, <span class="hljs-attr">224</span>, <span class="hljs-attr">3</span>) <span class="hljs-attr">uint8</span>&gt;</span></span>
 
