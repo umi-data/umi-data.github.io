@@ -41,8 +41,199 @@
     author={Chi, Cheng and Xu, Zhenjia and Pan, Chuer and Cousineau, Eric and Burchfiel, Benjamin and Feng, Siyuan and Tedrake, Russ and Song, Shuran},
     booktitle={Proceedings of Robotics: Science and Systems (RSS)},
     year={2024}`
+        },
+        {
+            "Project": "ManiWAV",
+            "Project Link": "https://mani-wav.github.io/",
+            "task": "Whiteboard Shape Wipe",
+            "data_links": {
+                "Zarr": "https://real.stanford.edu/maniwav/data/wipe/replay_buffer.zarr.zip"
+            },
+            "obs": ["Image", "Proprio", "Audio"],
+            "actions": ["6 DoF Movement", "Gripper Width"],
+            "n_demos": 119,
+            "n_envs": 1,
+            "contact": "liuzeyi@stanford.edu",
+            "license": "MIT",
+            "citation": `@article{liu2024maniwav,
+    title={ManiWAV: Learning Robot Manipulation from In-the-Wild Audio-Visual Data},
+    author={Liu, Zeyi and Chi, Cheng and Cousineau, Eric and Kuppuswamy, Naveen and Burchfiel, Benjamin and Song, Shuran},
+    journal={arXiv preprint arXiv:2406.19464},
+    year={2024}
+}`
+        },
+        {
+            "task": "Flip bagel",
+            "data_links": {
+                "Zarr": "https://real.stanford.edu/maniwav/data/flip/replay_buffer.zarr.zip"
+            },
+            "obs": ["Image", "Proprio", "Audio"],
+            "actions": ["6 DoF Movement", "Gripper Width"],
+            "n_demos": 283,
+            "n_envs": 1,
+            "license": "MIT",
+            "citation": ""
+        },
+        {
+            "task": "Pour dice",
+            "data_links": {
+                "Zarr": "https://real.stanford.edu/maniwav/data/pour/replay_buffer.zarr.zip"
+            },
+            "obs": ["Image", "Proprio", "Audio"],
+            "actions": ["6 DoF Movement", "Gripper Width"],
+            "n_demos": 145,
+            "n_envs": 1,
+            "license": "MIT",
+            "citation": ""
+        },
+        {
+            "task": "Strap wires with velcro tape",
+            "data_links": {
+                "Zarr": "https://real.stanford.edu/maniwav/data/velcro_tape/replay_buffer.zarr.zip"
+            },
+            "obs": ["Image", "Proprio", "Audio"],
+            "actions": ["6 DoF Movement", "Gripper Width"],
+            "n_demos": 193,
+            "n_envs": 1,
+            "license": "MIT",
+            "citation": ""
+        },
+        {
+            "task": "Flip bagel in the wild",
+            "data_links": {
+                "MP4": "https://real.stanford.edu/maniwav/data/bagel_in_wild/demos/",
+                "Zarr": "https://real.stanford.edu/maniwav/data/bagel_in_wild/replay_buffer.zarr.zip"
+            },
+            "obs": ["Image", "Proprio", "Audio"],
+            "actions": ["6 DoF Movement", "Gripper Width"],
+            "n_demos": 274,
+            "n_envs": 7,
+            "license": "MIT",
+            "citation": ""
         }
         ];
+
+        function generateTable(data) {
+            let tableBody = document.querySelector("table tbody");
+            tableBody.innerHTML = ""; // Clear existing content
+
+            data.forEach((row) => {
+                let tr = document.createElement("tr");
+
+                // Project Name
+                if (row["Project"]) {
+                    let projectName = document.createElement("td");
+                    let projectLink = document.createElement("a");
+                    projectLink.href = row["Project Link"] || "#";
+                    projectLink.textContent = row["Project"];
+                    projectName.appendChild(projectLink);
+                    tr.appendChild(projectName);
+                } else {
+                    tr.appendChild(document.createElement("td"));
+                }
+
+                // Contact
+                let contact = document.createElement("td");
+                if (row["contact"]) {
+                    let contactLink = document.createElement("a");
+                    contactLink.href = `mailto:${row["contact"]}`;
+                    contactLink.textContent = row["contact"];
+                    contact.appendChild(contactLink);
+                }
+                tr.appendChild(contact);
+
+                // Task Name
+                let taskName = document.createElement("td");
+                taskName.textContent = row["task"];
+                tr.appendChild(taskName);
+
+                // Data Links
+                let dataLinks = document.createElement("td");
+                for (let format in row["data_links"]) {
+                    let link = document.createElement("a");
+                    link.href = row["data_links"][format];
+                    link.textContent = format;
+                    link.style.marginRight = "10px";
+                    dataLinks.appendChild(link);
+                }
+                tr.appendChild(dataLinks);
+
+                // Observations
+                let obs = document.createElement("td");
+                let obsTags = row["obs"].map(obsItem => {
+                    let span = document.createElement("span");
+                    span.classList.add("tag", "is-normal");
+                    if (obsItem.toLowerCase() === "image") {
+                        span.classList.add("is-primary");
+                    } else if (obsItem.toLowerCase() === "proprio") {
+                        span.classList.add("is-info");
+                    } else if (obsItem.toLowerCase() === "bimanual") {
+                        span.classList.add("is-success");
+                    } else if (obsItem.toLowerCase() === "audio") {
+                        span.classList.add("is-danger");
+                    }
+                    span.textContent = obsItem;
+                    return span;
+                });
+                obsTags.forEach(tag => obs.appendChild(tag));
+                tr.appendChild(obs);
+
+                // Actions
+                let actions = document.createElement("td");
+                let actionTags = row["actions"].map(actionItem => {
+                    let span = document.createElement("span");
+                    span.classList.add("tag", "is-normal");
+                    if (actionItem.toLowerCase() === "6 dof movement") {
+                        span.classList.add("is-primary", "is-light");
+                    } else if (actionItem.toLowerCase() === "gripper width") {
+                        span.classList.add("is-link", "is-light");
+                    } else if (actionItem.toLowerCase() === "bimanual") {
+                        span.classList.add("is-success", "is-light");
+                    }
+                    span.textContent = actionItem;
+                    return span;
+                });
+                actionTags.forEach(tag => actions.appendChild(tag));
+                tr.appendChild(actions);
+
+                // Number of Demonstrations
+                let demos = document.createElement("td");
+                demos.textContent = row["n_demos"];
+                tr.appendChild(demos);
+
+                // Number of Environments
+                let envs = document.createElement("td");
+                envs.textContent = row["n_envs"];
+                tr.appendChild(envs);
+
+                // License
+                let license = document.createElement("td");
+                license.textContent = row["license"];
+                tr.appendChild(license);
+
+                // Citation
+                let citation = document.createElement("td");
+                if (row["citation"]) {
+                    let citationPre = document.createElement("pre");
+                    citationPre.style.maxWidth = "400px";
+                    citationPre.style.overflowX = "auto";
+                    let citationCode = document.createElement("code");
+                    citationCode.textContent = row["citation"];
+                    citationPre.appendChild(citationCode);
+                    citation.appendChild(citationPre);
+                }
+                tr.appendChild(citation);
+
+                tableBody.appendChild(tr);
+            });
+        }
+
+
+        // Call the function after DOM has loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            generateTable(rows);
+        });
+
     </script>
 </head>
 
@@ -198,7 +389,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <!-- <tr>
                             <td><a href="https://umi-gripper.github.io/">UMI</a></td>
                             <td><a href="mailto:chuerpan@stanford.edu">chuerpan@stanford.edu</a></td>
                             <td>Cup Rearrangement</td>
@@ -336,7 +527,7 @@
 }</code></pre>
                             </div>
                         </td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>
