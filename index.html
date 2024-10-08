@@ -23,24 +23,83 @@
     <script>hljs.highlightAll();</script>
 
     <script>
-        let rows = [{
+        let rows = [
+        {
             "Project": "UMI",
             "Project Link": "https://umi-gripper.github.io/",
-            "task": "Cup Rearrangement",
+            "task": "Bimanual Dish Washing",
             "data_links": {
-                "MP4": "#", "Zarr": "#",
+                "Zarr": "https://real.stanford.edu/umi/data/dish_washing/bimanual_dish_washing.zarr.zip",
+                "MP4": "https://real.stanford.edu/umi/data/dish_washing/bimanual_dish_washing_mp4s.zip"
             },
-            "obs": ["Image", "Proprio"],
+            "obs": ["Image", "Proprio", "Bimanual"],
             "actions": ["6 DoF Movement", "Gripper Width"],
-            "n_demos": 1400,
-            "n_envs": 30,
+            "n_demos": 258,
+            "n_envs": 1,
             "contact": "chuerpan@stanford.edu",
             "license": "MIT",
             "citation": `@inproceedings{chi2024universal,
     title={Universal Manipulation Interface: In-The-Wild Robot Teaching Without In-The-Wild Robots},
     author={Chi, Cheng and Xu, Zhenjia and Pan, Chuer and Cousineau, Eric and Burchfiel, Benjamin and Feng, Siyuan and Tedrake, Russ and Song, Shuran},
     booktitle={Proceedings of Robotics: Science and Systems (RSS)},
-    year={2024}`
+    year={2024}
+}`
+        },
+        {
+            "Project Link": "https://umi-gripper.github.io/",
+            "task": "Bimanual Cloth Folding",
+            "data_links": {
+                "Zarr": "https://real.stanford.edu/umi/data/bimanual_cloth_folding/bimanual_cloth_folding.zarr.zip",
+                "MP4": "https://real.stanford.edu/umi/data/bimanual_cloth_folding/bimanual_cloth_folding_mp4s.zip" 
+            },
+            "obs": ["Image", "Proprio", "Bimanual"],
+            "actions": ["6 DoF Movement", "Gripper Width"],
+            "n_demos": 249,
+            "n_envs": 1,
+            "license": "MIT",
+            "notes": "372 demos in the mp4 zip for two demo collection sessions, 249 of them are included in the zarr file"
+        },
+        {
+            "Project Link": "https://umi-gripper.github.io/",
+            "task": "Dynamic Tossing",
+            "data_links": {
+                "Zarr": "https://real.stanford.edu/umi/data/dynamic_tossing/dynamic_tossing.zarr.zip",
+                "MP4": "https://real.stanford.edu/umi/data/dynamic_tossing/dynamic_tossing_mp4s.zip"
+            },
+            "obs": ["Image", "Proprio"],
+            "actions": ["6 DoF Movement", "Gripper Width"],
+            "n_demos": 284,
+            "n_envs": 1,
+            "license": "MIT",
+            "notes": "296 demos of 5 demo collection sessions are included in the mp4 zip, 284 of them are included in the zarr file"
+        },
+        {
+            "Project Link": "https://umi-gripper.github.io/",
+            "task": "Cup Arragement in the Lab",
+            "data_links": {
+                "Zarr": "https://real.stanford.edu/umi/data/cup_arrangement/cup_in_the_lab.zarr.zip",
+                "MP4": "https://real.stanford.edu/umi/data/cup_arrangement/cup_in_lab_mp4s.zip"  
+            },
+            "obs": ["Image", "Proprio"],
+            "actions": ["6 DoF Movement", "Gripper Width"],
+            "n_demos": 305,
+            "n_envs": 1,
+            "license": "MIT",
+            "notes": "331 demos of 6 demo collection sessions are included in the mp4 zip, 305 of them are included in the zarr file"
+        },
+        {
+            "Project Link": "https://umi-gripper.github.io/",
+            "task": "Cup Arragement in the Wild",
+            "data_links": {
+                "Zarr": "https://real.stanford.edu/umi/data/cup_in_the_wild/cup_in_the_wild.zarr.zip",
+                "MP4": "https://real.stanford.edu/umi/data/cup_in_the_wild/cup_in_the_wild_mp4s.zip" 
+            },
+            "obs": ["Image", "Proprio"],
+            "actions": ["6 DoF Movement", "Gripper Width"],
+            "n_demos": 1447,
+            "n_envs": 30,
+            "license": "MIT",
+            "notes": "2795 demos from 71 environments are included in the mp4s.zip, 1447 of them for 30 envrionments are included in the zarr file for policy training"
         },
         {
             "Project": "ManiWAV",
@@ -240,6 +299,11 @@
                 license.textContent = row["license"];
                 tr.appendChild(license);
 
+                // Notes
+                let note = document.createElement("td");
+                note.textContent = row["notes"];
+                tr.appendChild(note);
+
                 // Citation
                 let citation = document.createElement("td");
                 if (row["citation"]) {
@@ -306,7 +370,7 @@
 
 
     <!-- Hero Section -->
-    <section class="hero is-link is-fullheight video" style="overflow: hidden; position:relative;">
+    <section class="hero is-link is-fullheight video" style="overflow: hidden; position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
         <div class="hero-video" style="height: 100%; width: 177.77777778vh; min-width: 100%;min-height: 56.25vw;">
             <video playsinline autoplay muted loop>
                 <source src=" ./teaser.mp4" type="video/mp4">
@@ -332,6 +396,7 @@
         </div>
     </section>
 
+    <div style="height: 100vh;"></div>
 
     <section class="section is-small" id="overview">
         <div class="container is-max-desktop">
@@ -414,6 +479,7 @@
                             <th style="min-width: 100px;"># Demos</th>
                             <th style="min-width: 100px;"># Envs</th>
                             <th>License</th>
+                            <th style="min-width: 400px;">Notes</th>
                             <th style="max-width: 400px;">Citation</th> <!-- Set max width for citation -->
                         </tr>
                     </thead>
