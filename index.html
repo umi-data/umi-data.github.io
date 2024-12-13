@@ -292,7 +292,284 @@
                 "n_envs": 32,
                 "license": "MIT",
                 "notes": "1,920 demos from 32 environments are included in the MP4 link, with 60 demos per environment. 1,733 valid demos of them are included in the Zarr file for policy learning."
-            }
+            },
+
+
+
+            {
+                "Project": "Fast-UMI",
+                "Project Link": "https://fastumi.com/",
+                "contact": "zxzmkufufu@gmail.com",
+                "license": "MIT",
+                "citation": `@article{wu2024fast,
+    title={Fast-UMI: A Scalable and Hardware-Independent Universal Manipulation Interface},
+    author={Wu, Ziniu and Wang, Tianyu and Guan, Chuyue and Jia, Zhongjie and Liang, Shuai and Song, Haoming and Qu, Delin and Wang, Dong and Wang, Zhigang and Cao, Nieqing and others},
+    journal={arXiv preprint arXiv:2409.19499},
+    year={2024}
+}`,
+                "task": "Open Container",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data",
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 251,
+                "n_envs": 1,
+                "notes":
+                    "Each HDF5 file corresponds to a single episode and encapsulates both observational data and actions. Below is the hierarchical structure of the HDF5 file" + `<pre><code>episode_<idx>.hdf5
+├── observations/
+│   ├── images/
+│   │   └── <camera_name_1> (Dataset: num_frames, height=1920, width=1080, channels=3, gzip with compression level 4)
+│   └── qpos (Dataset: Pos X, Pos Y, Pos Z, Q_X, Q_Y, Q_Z, Q_W)
+├── action (Dataset: Pos X, Pos Y, Pos Z, Q_X, Q_Y, Q_Z, Q_W) (actions mirror the qpos data)
+└── attributes/
+    └── sim = False</code></pre>`+ " For code to visualize the images and trajectories, as well as tools to convert FastUMI dataset format to the UMI dataset format, visit <a href='https://github.com/YdingTeam/FastUMI_Data'>FastUMI's repo</a>."
+            },
+
+
+            {
+                "task": "Fold Towel",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data",
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 243,
+                "n_envs": 1,
+                "license": "MIT",
+            },
+
+            {
+                "task": "Pick Bear",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data",
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 546,
+                "n_envs": 1,
+                "license": "MIT",
+            }, {
+                "task": "Place Plate",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 499,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+            {
+                "task": "Rearrange Coke",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 500,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+            {
+                "task": "Sweep Trash",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 512,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+            {
+                "task": "Clean Table",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 100,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+            {
+                "task": "Unplug Charger",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 429,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+            {
+                "task": "Pour Coke",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 398,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+            {
+                "task": "Cover Beef",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 517,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+            {
+                "task": "Hotdog in Ricecooker",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 100,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+            {
+                "task": "Hotdog in Roaster",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 500,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+            {
+                "task": "Pick Lid",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 496,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+            {
+                "task": "Open Drawer",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 833,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+
+            {
+                "task": "Open Roaster",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 499,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+
+            {
+                "task": "Pick Cup",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 895,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+
+            {
+                "task": "Pick Pen",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 608,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+
+
+            {
+                "task": "Close Ricecooker",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 20,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+
+
+            {
+                "task": "Open Suitcase",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 20,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+
+
+
+            {
+                "task": "Pick Bread",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 495,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+
+            {
+                "task": "Place Pot",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 300,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+
+            {
+                "task": "Open Rice Cooker",
+                "data_links": {
+                    "HDF5": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI-Data"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 204,
+                "n_envs": 1,
+                "license": "MIT"
+            },
         ];
 
         function generateTable(data) {
@@ -406,7 +683,9 @@
 
                 // Notes
                 let note = document.createElement("td");
-                note.textContent = row["notes"];
+                if (row["notes"]) {
+                    note.innerHTML = row["notes"];
+                }
                 tr.appendChild(note);
 
                 // Citation
