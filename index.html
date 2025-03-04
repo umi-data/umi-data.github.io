@@ -316,7 +316,7 @@
                 "n_demos": 251,
                 "n_envs": 1,
                 "notes":
-                    "Each HDF5 file corresponds to a single episode and encapsulates both observational data and actions. Below is the hierarchical structure of the HDF5 file" + `<pre><code>episode_<idx>.hdf5
+                    "Each HDF5 file corresponds to a single episode and encapsulates both observational data and actions. Below is the hierarchical structure of the HDF5 file" + `<pre style="max-width: 600px;overflow-x: auto;"><code>episode_<idx>.hdf5
 ├── observations/
 │   ├── images/
 │   │   └── <camera_name_1> (Dataset: num_frames, height=1920, width=1080, channels=3, gzip with compression level 4)
@@ -567,6 +567,91 @@
                 "obs": ["Image", "Proprio"],
                 "actions": ["6 DoF Movement", "Gripper Width"],
                 "n_demos": 204,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+
+            {
+                "Project": "LEGATO",
+                "Project Link": "https://ut-hcrl.github.io/LEGATO/",
+                "contact": "mingyo@utexas.edu",
+                "license": "MIT",
+                "citation": `@article{seo2024legato,
+    title={LEGATO: Cross-Embodiment Imitation Using a Grasping Tool},
+    author={Seo, Mingyo and Park, H. Andy and Yuan, Shenli and Zhu, Yuke and
+    and Sentis, Luis},
+    journal={IEEE Robotics and Automation Letters (RA-L)},
+    year={2025}
+}`,
+                "task": "Closing The Lid (Sim)",
+                "data_links": {
+                    "HDF5": "https://utexas.box.com/s/ya7n93ybh8t69u1daq78ddjszwylka92",
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 150,
+                "n_envs": 1,
+                "notes":
+                    "The datasets follow the <a href='https://robomimic.github.io/'>Robomimic</a> format. Each HDF5 file corresponds to a single episode and encapsulates both observational data and actions. Below is the hierarchical structure of an HDF5 file:" + `<pre style="max-width: 600px;overflow-x: auto;"><code>episode_<idx>.hdf5 dataset
+├── actions: 7D value: differential pose of the hand-helg gripper (x, y, z, roll, pitch, yaw) + gripper action (binary, closing: true)
+└── observation
+    ├── right_gray: 128x128x1 array
+    ├── left_gray: 128x128x1 array
+    ├── delta_positions: 6D value
+    └── delta_eulers: 6D value</code></pre>`+ " For code to visualize the images and trajectories, visit <a href='https://github.com/UT-HCRL/LEGATO'>LEGATO's repo</a>."
+            },
+            {
+                "task": "Cup Shelving (Sim)",
+                "data_links": {
+                    "HDF5": "https://utexas.box.com/s/wmo0h0t8123t43vlzbysf9q2xywq2b7w"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 150,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+            {
+                "task": "Ladle Reorganization (Sim)",
+                "data_links": {
+                    "HDF5": "https://utexas.box.com/s/t0nia0ee26otlrgl8zo8492jiqn6ymeg"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 150,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+            {
+                "task": "Closing The Lid (Real)",
+                "data_links": {
+                    "HDF5": "https://utexas.box.com/s/my5qagwcfdjs2t6wk9fl7rlb35cgvh1z"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 150,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+            {
+                "task": "Cup Shelving (Real)",
+                "data_links": {
+                    "HDF5": "https://utexas.box.com/s/bc6nd5xegqght0dsywdnts5k8k8py1jg"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 150,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+            {
+                "task": "Ladle Reorganization (Real)",
+                "data_links": {
+                    "HDF5": "https://utexas.box.com/s/p971sf34sd8i5fwuwf47soojhp5788gb"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 150,
                 "n_envs": 1,
                 "license": "MIT"
             },
@@ -824,20 +909,20 @@
                         Even a simple, single-task dataset with 50 demonstrations is valuable. As long as you're happy
                         to
                         share it, we are happy to list it here.
-                        Every bit of data contributes to the community’s collective knowledge.
+                        Every bit of data contributes to the community's collective knowledge.
                     </p>
 
                     <h3>♻️ UMI is a constantly evolving design.</h3>
                     <p>
-                        There’s no strict definition of UMI data. You are encouraged to contribute datasets even if they
-                        don’t follow the same hardware or data format.
+                        There's no strict definition of UMI data. You are encouraged to contribute datasets even if they
+                        don't follow the same hardware or data format.
                         We welcome enhancements to the UMI design—be it new sensors (e.g., <a
                             href="https://mani-wav.github.io/">ManiWav</a>),
                         finger designs, or cameras (e.g., <a href="https://fastumi.com/">fastUMI</a>).
                         Even if your data is not directly transferable to the current UMI setup, it can still be useful
                         for
                         pretraining or other creative applications.
-                        If it can benefit the UMI community, it’s worth listing!
+                        If it can benefit the UMI community, it's worth listing!
                     </p>
                 </div>
             </div>
@@ -862,7 +947,7 @@
                             <th style="min-width: 100px;"># Demos</th>
                             <th style="min-width: 100px;"># Envs</th>
                             <th>License</th>
-                            <th style="min-width: 400px;">Notes</th>
+                            <th style="max-width: 600px;">Notes</th>
                             <th style="max-width: 400px;">Citation</th> <!-- Set max width for citation -->
                         </tr>
                     </thead>
