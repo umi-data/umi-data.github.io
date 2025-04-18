@@ -532,9 +532,6 @@
                 "n_envs": 1,
                 "license": "MIT"
             },
-
-
-
             {
                 "task": "Pick Bread",
                 "data_links": {
@@ -655,7 +652,99 @@
                 "n_envs": 1,
                 "license": "MIT"
             },
+
+            {
+                "Project": "ViTaMIn: Learning Contact-Rich Tasks Through Robot-Free Visuo-Tactile Manipulation Interface",
+                "Project Link": "https://chuanyune.github.io/ViTaMIn_page/",
+                "contact": ["fangchen_liu@berkeley.edu", "chuanyu.ne79@gmail.com"],
+                "license": "MIT",
+                "citation": `@article{liu2025vitamin,
+  title={ViTaMIn: Learning Contact-Rich Tasks Through Robot-Free Visuo-Tactile Manipulation Interface},
+  author={Liu, Fangchen and Li, Chuanyu and Qin, Yihua and Shaw, Ankit and Xu, Jing and Abbeel, Pieter and Chen, Rui},
+  journal={arXiv preprint arXiv:2504.06156},
+  year={2025}
+}`,
+                "task": "Orange Placement",
+                "data_links": {
+                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 73,
+                "n_envs": 1,
+            },
+            {
+                "task": "Sponge Insertion",
+                "data_links": {
+                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 138,
+                "n_envs": 1,
+            },
+            {
+                "task": "Test Tube Reorientation",
+                "data_links": {
+                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 125,
+                "n_envs": 1,
+            },
+            {
+                "task": "Scissor Hanging",
+                "data_links": {
+                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 137,
+                "n_envs": 1,
+            },
+            {
+                "task": "Articulated Object Manipulation",
+                "data_links": {
+                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 83,
+                "n_envs": 1,
+            },
+            {
+                "task": "Dynamic Peg Insertion",
+                "data_links": {
+                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 101,
+                "n_envs": 1,
+            },
+            {
+                "task": "Articulated Object Manipulation",
+                "data_links": {
+                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 83,
+                "n_envs": 1,
+            },
+            {
+                "task": "Dynamic Peg Insertion",
+                "data_links": {
+                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 101,
+                "n_envs": 1,
+            }
         ];
+
 
         function generateTable(data) {
             let tableBody = document.querySelector("table tbody");
