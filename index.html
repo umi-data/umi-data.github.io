@@ -25,276 +25,179 @@
     <script>
         let rows = [
             {
-                "Project": "UMI",
-                "Project Link": "https://umi-gripper.github.io/",
-                "task": "Bimanual Dish Washing",
-                "data_links": {
-                    "Zarr": "https://real.stanford.edu/umi/data/dish_washing/bimanual_dish_washing.zarr.zip",
-                    "MP4": "https://real.stanford.edu/umi/data/dish_washing/bimanual_dish_washing_mp4s.zip"
-                },
-                "obs": ["Image", "Proprio", "Bimanual"],
-                "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 258,
-                "n_envs": 1,
-                "contact": "chuerpan@stanford.edu",
+                "Project": "ViTaMIn: Learning Contact-Rich Tasks Through Robot-Free Visuo-Tactile Manipulation Interface",
+                "Project Link": "https://chuanyune.github.io/ViTaMIn_page/",
+                "contact": ["fangchen_liu@berkeley.edu", "chuanyu.ne79@gmail.com"],
                 "license": "MIT",
-                "citation": `@inproceedings{chi2024universal,
-    title={Universal Manipulation Interface: In-The-Wild Robot Teaching Without In-The-Wild Robots},
-    author={Chi, Cheng and Xu, Zhenjia and Pan, Chuer and Cousineau, Eric and Burchfiel, Benjamin and Feng, Siyuan and Tedrake, Russ and Song, Shuran},
-    booktitle={Proceedings of Robotics: Science and Systems (RSS)},
-    year={2024}
-}`
-            },
-            {
-                "Project Link": "https://umi-gripper.github.io/",
-                "task": "Bimanual Cloth Folding",
-                "data_links": {
-                    "Zarr": "https://real.stanford.edu/umi/data/bimanual_cloth_folding/bimanual_cloth_folding.zarr.zip",
-                    "MP4": "https://real.stanford.edu/umi/data/bimanual_cloth_folding/bimanual_cloth_folding_mp4s.zip"
-                },
-                "obs": ["Image", "Proprio", "Bimanual"],
-                "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 249,
-                "n_envs": 1,
-                "license": "MIT",
-                "notes": "372 demos in the mp4 zip for two demo collection sessions, 249 of them are included in the zarr file"
-            },
-            {
-                "Project Link": "https://umi-gripper.github.io/",
-                "task": "Dynamic Tossing",
-                "data_links": {
-                    "Zarr": "https://real.stanford.edu/umi/data/dynamic_tossing/dynamic_tossing.zarr.zip",
-                    "MP4": "https://real.stanford.edu/umi/data/dynamic_tossing/dynamic_tossing_mp4s.zip"
-                },
-                "obs": ["Image", "Proprio"],
-                "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 284,
-                "n_envs": 1,
-                "license": "MIT",
-                "notes": "296 demos of 5 demo collection sessions are included in the mp4 zip, 284 of them are included in the zarr file"
-            },
-            {
-                "Project Link": "https://umi-gripper.github.io/",
-                "task": "Cup Arragement in the Lab",
-                "data_links": {
-                    "Zarr": "https://real.stanford.edu/umi/data/cup_arrangement/cup_in_the_lab.zarr.zip",
-                    "MP4": "https://real.stanford.edu/umi/data/cup_arrangement/cup_in_lab_mp4s.zip"
-                },
-                "obs": ["Image", "Proprio"],
-                "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 305,
-                "n_envs": 1,
-                "license": "MIT",
-                "notes": "331 demos of 6 demo collection sessions are included in the mp4 zip, 305 of them are included in the zarr file"
-            },
-            {
-                "Project Link": "https://umi-gripper.github.io/",
-                "task": "Cup Arragement in the Wild",
-                "data_links": {
-                    "Zarr": "https://real.stanford.edu/umi/data/cup_in_the_wild/cup_in_the_wild.zarr.zip",
-                    "MP4": "https://real.stanford.edu/umi/data/cup_in_the_wild/cup_in_the_wild_mp4s.zip"
-                },
-                "obs": ["Image", "Proprio"],
-                "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 1447,
-                "n_envs": 30,
-                "license": "MIT",
-                "notes": "2795 demos from 71 environments are included in the mp4s.zip, 1447 of them for 30 envrionments are included in the zarr file for policy training"
-            },
-            {
-                "Project": "ManiWAV",
-                "Project Link": "https://mani-wav.github.io/",
-                "task": "Whiteboard Shape Wipe",
-                "data_links": {
-                    "Zarr": "https://real.stanford.edu/maniwav/data/wipe/replay_buffer.zarr.zip"
-                },
-                "obs": ["Image", "Proprio", "Audio"],
-                "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 119,
-                "n_envs": 1,
-                "contact": "liuzeyi@stanford.edu",
-                "license": "MIT",
-                "citation": `@article{liu2024maniwav,
-    title={ManiWAV: Learning Robot Manipulation from In-the-Wild Audio-Visual Data},
-    author={Liu, Zeyi and Chi, Cheng and Cousineau, Eric and Kuppuswamy, Naveen and Burchfiel, Benjamin and Song, Shuran},
-    journal={arXiv preprint arXiv:2406.19464},
-    year={2024}
-}`
-            },
-            {
-                "task": "Flip bagel",
-                "data_links": {
-                    "Zarr": "https://real.stanford.edu/maniwav/data/flip/replay_buffer.zarr.zip"
-                },
-                "obs": ["Image", "Proprio", "Audio"],
-                "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 283,
-                "n_envs": 1,
-                "license": "MIT",
-            },
-            {
-                "task": "Pour dice",
-                "data_links": {
-                    "Zarr": "https://real.stanford.edu/maniwav/data/pour/replay_buffer.zarr.zip"
-                },
-                "obs": ["Image", "Proprio", "Audio"],
-                "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 145,
-                "n_envs": 1,
-                "license": "MIT",
-            },
-            {
-                "task": "Strap wires with velcro tape",
-                "data_links": {
-                    "Zarr": "https://real.stanford.edu/maniwav/data/velcro_tape/replay_buffer.zarr.zip"
-                },
-                "obs": ["Image", "Proprio", "Audio"],
-                "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 193,
-                "n_envs": 1,
-                "license": "MIT",
-            },
-            {
-                "task": "Flip bagel in the wild",
-                "data_links": {
-                    "MP4": "https://real.stanford.edu/maniwav/data/bagel_in_wild/demos/",
-                    "Zarr": "https://real.stanford.edu/maniwav/data/bagel_in_wild/replay_buffer.zarr.zip"
-                },
-                "obs": ["Image", "Proprio", "Audio"],
-                "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 274,
-                "n_envs": 7,
-                "license": "MIT",
-            },
-            {
-                "Project": "UMI on Legs",
-                "Project Link": "https://umi-on-legs.github.io/",
-                "task": "Kettlebell Pushing",
-                "data_links": {
-                    "MP4": "https://real.stanford.edu/umi-on-legs/pushing_2024_05_29_huy/",
-                    "Zarr": "https://real.stanford.edu/umi-on-legs/pushing_2024_05_29_huy.zarr.zip"
-                },
-                "obs": ["Image", "Proprio"],
-                "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 14,
-                "n_envs": 1,
-                "contact": "huyha@stanford.edu",
-                "license": "MIT",
-                "citation": `@inproceedings{ha2024umilegs,
-  title={{UMI} on Legs: Making Manipulation Policies Mobile with Manipulation-Centric Whole-body Controllers},
-  author={Huy Ha and Yihuai Gao and Zipeng Fu and Jie Tan and Shuran Song},
-  year={2024},
-  booktitle={Proceedings of the 2024 Conference on Robot Learning},
-}`
-            },
-            {
-                "task": "Tennis Ball Basket Toss",
-                "data_links": {
-                    "MP4": "https://real.stanford.edu/umi-on-legs/tossing/",
-                    "Zarr": "https://real.stanford.edu/umi-on-legs/tossing.zarr.zip"
-                },
-                "obs": ["Image", "Proprio"],
-                "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 500,
-                "n_envs": 1,
-                "license": "MIT",
-            },
-            {
-                "Project": "Data Scaling Laws",
-                "Project Link": "https://data-scaling-laws.github.io/",
-                "contact": ["lfq24@mails.tsinghua.edu.cn", "huyd21@mails.tsinghua.edu.cn"],
-                "license": "MIT",
-                "citation": `@article{lin2024data,
-    title={Data Scaling Laws in Imitation Learning for Robotic Manipulation},
-    author={Lin, Fanqi and Hu, Yingdong and Sheng, Pingyue and Wen, Chuan and You,
-    Jiacheng and Gao, Yang},
-    journal={arXiv preprint arXiv:2410.18647},
-    year={2024}
+                "citation": `@article{liu2025vitamin,
+  title={ViTaMIn: Learning Contact-Rich Tasks Through Robot-Free Visuo-Tactile Manipulation Interface},
+  author={Liu, Fangchen and Li, Chuanyu and Qin, Yihua and Shaw, Ankit and Xu, Jing and Abbeel, Pieter and Chen, Rui},
+  journal={arXiv preprint arXiv:2504.06156},
+  year={2025}
 }`,
-                "task": "Pour Water - Split 1",
+                "task": "Orange Placement",
                 "data_links": {
-                    "Zarr": "https://huggingface.co/datasets/Fanqi-Lin/Processed-Task-Dataset/tree/main/pour_water",
-                    "MP4": "https://huggingface.co/datasets/Fanqi-Lin/GoPro-Raw-Videos/tree/main/pour_water"
+                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
                 },
-                "obs": ["Image", "Proprio"],
+                "obs": ["Image", "Proprio", "Tactile"],
                 "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 3648,
-                "n_envs": 32,
-                "license": "MIT",
-                "notes": "This first split corresponds to the dataset generated from all videos in env_{1~32}/object_1, with a total of 3,648 demos. The MP4 link contains 9,600 demos from 32 environments. In the first 16 environments, 4 different objects were collected, while in the remaining 16 environments, only 1 object was collected. Each object has 120 demos."
+                "n_demos": 73,
+                "n_envs": 1,
             },
             {
-                "Project Link": "https://data-scaling-laws.github.io/",
-                "task": "Pour Water - Split 2",
+                "task": "Sponge Insertion",
                 "data_links": {
-                    "Zarr": "https://huggingface.co/datasets/Fanqi-Lin/Processed-Task-Dataset/tree/main/pour_water_16_env_4_object",
-                    "MP4": "https://huggingface.co/datasets/Fanqi-Lin/GoPro-Raw-Videos/tree/main/pour_water"
+                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
                 },
-                "obs": ["Image", "Proprio"],
+                "obs": ["Image", "Proprio", "Tactile"],
                 "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 6896,
-                "n_envs": 16,
-                "license": "MIT",
-                "notes": "This second split corresponds to the dataset generated from all videos in env_{1~16}/object_{1~4}, with a total of 6,896 demos. The MP4 link contains 9,600 demos from 32 environments. In the first 16 environments, 4 different objects were collected, while in the remaining 16 environments, only 1 object was collected. Each object has 120 demos."
+                "n_demos": 138,
+                "n_envs": 1,
             },
             {
-                "Project Link": "https://data-scaling-laws.github.io/",
-                "task": "Mouse Arrangement - Split 1",
+                "task": "Test Tube Reorientation",
                 "data_links": {
-                    "Zarr": "https://huggingface.co/datasets/Fanqi-Lin/Processed-Task-Dataset/tree/main/arrange_mouse",
-                    "MP4": "https://huggingface.co/datasets/Fanqi-Lin/GoPro-Raw-Videos/tree/main/pick_place_mouse"
+                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
                 },
-                "obs": ["Image", "Proprio"],
+                "obs": ["Image", "Proprio", "Tactile"],
                 "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 3564,
-                "n_envs": 32,
-                "license": "MIT",
-                "notes": "This first split corresponds to the dataset generated from all videos in env_{1~32}/object_1, with a total of 3,564 demos. The MP4 link contains 9,600 demos from 32 environments. In the first 16 environments, 4 different objects were collected, while in the remaining 16 environments, only 1 object was collected. Each object has 120 demos."
+                "n_demos": 125,
+                "n_envs": 1,
             },
             {
-                "Project Link": "https://data-scaling-laws.github.io/",
-                "task": "Mouse Arrangement - Split 2",
+                "task": "Scissor Hanging",
                 "data_links": {
-                    "Zarr": "https://huggingface.co/datasets/Fanqi-Lin/Processed-Task-Dataset/tree/main/arrange_mouse_16_env_4_object",
-                    "MP4": "https://huggingface.co/datasets/Fanqi-Lin/GoPro-Raw-Videos/tree/main/pick_place_mouse"
+                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
                 },
-                "obs": ["Image", "Proprio"],
+                "obs": ["Image", "Proprio", "Tactile"],
                 "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 6505,
-                "n_envs": 16,
-                "license": "MIT",
-                "notes": "This second split corresponds to the dataset generated from all videos in env_{1~16}/object_{1~4}, with a total of 6,505 demos. In the first 16 environments, 4 different objects were collected, while in the remaining 16 environments, only 1 object was collected. Each object has 120 demos."
+                "n_demos": 137,
+                "n_envs": 1,
             },
             {
-                "Project Link": "https://data-scaling-laws.github.io/",
-                "task": "Fold Towels",
+                "task": "Articulated Object Manipulation",
                 "data_links": {
-                    "Zarr": "https://huggingface.co/datasets/Fanqi-Lin/Processed-Task-Dataset/tree/main/fold_towel",
-                    "MP4": "https://huggingface.co/datasets/Fanqi-Lin/GoPro-Raw-Videos/tree/main/fold_towel"
+                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
                 },
-                "obs": ["Image", "Proprio"],
+                "obs": ["Image", "Proprio", "Tactile"],
                 "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 1752,
-                "n_envs": 32,
-                "license": "MIT",
-                "notes": "1,920 demos from 32 environments are included in the MP4 link, with 60 demos per environment. 1,752 valid demos of them are included in the Zarr file for policy learning."
+                "n_demos": 83,
+                "n_envs": 1,
             },
             {
-                "Project Link": "https://data-scaling-laws.github.io/",
-                "task": "Unplug Charger",
+                "task": "Dynamic Peg Insertion",
                 "data_links": {
-                    "Zarr": "https://huggingface.co/datasets/Fanqi-Lin/Processed-Task-Dataset/tree/main/unplug_charger",
-                    "MP4": "https://huggingface.co/datasets/Fanqi-Lin/GoPro-Raw-Videos/tree/main/unplug_charger"
+                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 101,
+                "n_envs": 1,
+            },
+            {
+                "task": "Articulated Object Manipulation",
+                "data_links": {
+                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
                 },
                 "obs": ["Image", "Proprio"],
                 "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 1733,
-                "n_envs": 32,
-                "license": "MIT",
-                "notes": "1,920 demos from 32 environments are included in the MP4 link, with 60 demos per environment. 1,733 valid demos of them are included in the Zarr file for policy learning."
+                "n_demos": 83,
+                "n_envs": 1,
             },
-
-
+            {
+                "task": "Dynamic Peg Insertion",
+                "data_links": {
+                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 101,
+                "n_envs": 1,
+            },
+            {
+                "Project": "LEGATO",
+                "Project Link": "https://ut-hcrl.github.io/LEGATO/",
+                "contact": "mingyo@utexas.edu",
+                "license": "MIT",
+                "citation": `@article{seo2024legato,
+    title={LEGATO: Cross-Embodiment Imitation Using a Grasping Tool},
+    author={Seo, Mingyo and Park, H. Andy and Yuan, Shenli and Zhu, Yuke and
+    and Sentis, Luis},
+    journal={IEEE Robotics and Automation Letters (RA-L)},
+    year={2025}
+}`,
+                "task": "Closing The Lid (Sim)",
+                "data_links": {
+                    "HDF5": "https://utexas.box.com/s/ya7n93ybh8t69u1daq78ddjszwylka92",
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 150,
+                "n_envs": 1,
+                "notes":
+                    "The datasets follow the <a href='https://robomimic.github.io/'>Robomimic</a> format. Each HDF5 file corresponds to a single episode and encapsulates both observational data and actions. Below is the hierarchical structure of an HDF5 file:" + `<pre style="max-width: 600px;overflow-x: auto;"><code>episode_<idx>.hdf5 dataset
+├── actions: 7D value: differential pose of the hand-helg gripper (x, y, z, roll, pitch, yaw) + gripper action (binary, closing: true)
+└── observation
+    ├── right_gray: 128x128x1 array
+    ├── left_gray: 128x128x1 array
+    ├── delta_positions: 6D value
+    └── delta_eulers: 6D value</code></pre>`+ " For code to visualize the images and trajectories, visit <a href='https://github.com/UT-HCRL/LEGATO'>LEGATO's repo</a>."
+            },
+            {
+                "task": "Cup Shelving (Sim)",
+                "data_links": {
+                    "HDF5": "https://utexas.box.com/s/wmo0h0t8123t43vlzbysf9q2xywq2b7w"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 150,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+            {
+                "task": "Ladle Reorganization (Sim)",
+                "data_links": {
+                    "HDF5": "https://utexas.box.com/s/t0nia0ee26otlrgl8zo8492jiqn6ymeg"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 150,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+            {
+                "task": "Closing The Lid (Real)",
+                "data_links": {
+                    "HDF5": "https://utexas.box.com/s/my5qagwcfdjs2t6wk9fl7rlb35cgvh1z"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 150,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+            {
+                "task": "Cup Shelving (Real)",
+                "data_links": {
+                    "HDF5": "https://utexas.box.com/s/bc6nd5xegqght0dsywdnts5k8k8py1jg"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 150,
+                "n_envs": 1,
+                "license": "MIT"
+            },
+            {
+                "task": "Ladle Reorganization (Real)",
+                "data_links": {
+                    "HDF5": "https://utexas.box.com/s/p971sf34sd8i5fwuwf47soojhp5788gb"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 150,
+                "n_envs": 1,
+                "license": "MIT"
+            },
 
             {
                 "Project": "Fast-UMI",
@@ -568,181 +471,279 @@
                 "license": "MIT"
             },
 
+
             {
-                "Project": "LEGATO",
-                "Project Link": "https://ut-hcrl.github.io/LEGATO/",
-                "contact": "mingyo@utexas.edu",
+                "task": "Tennis Ball Basket Toss",
+                "data_links": {
+                    "MP4": "https://real.stanford.edu/umi-on-legs/tossing/",
+                    "Zarr": "https://real.stanford.edu/umi-on-legs/tossing.zarr.zip"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 500,
+                "n_envs": 1,
                 "license": "MIT",
-                "citation": `@article{seo2024legato,
-    title={LEGATO: Cross-Embodiment Imitation Using a Grasping Tool},
-    author={Seo, Mingyo and Park, H. Andy and Yuan, Shenli and Zhu, Yuke and
-    and Sentis, Luis},
-    journal={IEEE Robotics and Automation Letters (RA-L)},
-    year={2025}
+            },
+            {
+                "Project": "Data Scaling Laws",
+                "Project Link": "https://data-scaling-laws.github.io/",
+                "contact": ["lfq24@mails.tsinghua.edu.cn", "huyd21@mails.tsinghua.edu.cn"],
+                "license": "MIT",
+                "citation": `@article{lin2024data,
+    title={Data Scaling Laws in Imitation Learning for Robotic Manipulation},
+    author={Lin, Fanqi and Hu, Yingdong and Sheng, Pingyue and Wen, Chuan and You,
+    Jiacheng and Gao, Yang},
+    journal={arXiv preprint arXiv:2410.18647},
+    year={2024}
 }`,
-                "task": "Closing The Lid (Sim)",
+                "task": "Pour Water - Split 1",
                 "data_links": {
-                    "HDF5": "https://utexas.box.com/s/ya7n93ybh8t69u1daq78ddjszwylka92",
+                    "Zarr": "https://huggingface.co/datasets/Fanqi-Lin/Processed-Task-Dataset/tree/main/pour_water",
+                    "MP4": "https://huggingface.co/datasets/Fanqi-Lin/GoPro-Raw-Videos/tree/main/pour_water"
                 },
                 "obs": ["Image", "Proprio"],
                 "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 150,
-                "n_envs": 1,
-                "notes":
-                    "The datasets follow the <a href='https://robomimic.github.io/'>Robomimic</a> format. Each HDF5 file corresponds to a single episode and encapsulates both observational data and actions. Below is the hierarchical structure of an HDF5 file:" + `<pre style="max-width: 600px;overflow-x: auto;"><code>episode_<idx>.hdf5 dataset
-├── actions: 7D value: differential pose of the hand-helg gripper (x, y, z, roll, pitch, yaw) + gripper action (binary, closing: true)
-└── observation
-    ├── right_gray: 128x128x1 array
-    ├── left_gray: 128x128x1 array
-    ├── delta_positions: 6D value
-    └── delta_eulers: 6D value</code></pre>`+ " For code to visualize the images and trajectories, visit <a href='https://github.com/UT-HCRL/LEGATO'>LEGATO's repo</a>."
+                "n_demos": 3648,
+                "n_envs": 32,
+                "license": "MIT",
+                "notes": "This first split corresponds to the dataset generated from all videos in env_{1~32}/object_1, with a total of 3,648 demos. The MP4 link contains 9,600 demos from 32 environments. In the first 16 environments, 4 different objects were collected, while in the remaining 16 environments, only 1 object was collected. Each object has 120 demos."
             },
             {
-                "task": "Cup Shelving (Sim)",
+                "Project Link": "https://data-scaling-laws.github.io/",
+                "task": "Pour Water - Split 2",
                 "data_links": {
-                    "HDF5": "https://utexas.box.com/s/wmo0h0t8123t43vlzbysf9q2xywq2b7w"
+                    "Zarr": "https://huggingface.co/datasets/Fanqi-Lin/Processed-Task-Dataset/tree/main/pour_water_16_env_4_object",
+                    "MP4": "https://huggingface.co/datasets/Fanqi-Lin/GoPro-Raw-Videos/tree/main/pour_water"
                 },
                 "obs": ["Image", "Proprio"],
                 "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 150,
-                "n_envs": 1,
-                "license": "MIT"
+                "n_demos": 6896,
+                "n_envs": 16,
+                "license": "MIT",
+                "notes": "This second split corresponds to the dataset generated from all videos in env_{1~16}/object_{1~4}, with a total of 6,896 demos. The MP4 link contains 9,600 demos from 32 environments. In the first 16 environments, 4 different objects were collected, while in the remaining 16 environments, only 1 object was collected. Each object has 120 demos."
             },
             {
-                "task": "Ladle Reorganization (Sim)",
+                "Project Link": "https://data-scaling-laws.github.io/",
+                "task": "Mouse Arrangement - Split 1",
                 "data_links": {
-                    "HDF5": "https://utexas.box.com/s/t0nia0ee26otlrgl8zo8492jiqn6ymeg"
+                    "Zarr": "https://huggingface.co/datasets/Fanqi-Lin/Processed-Task-Dataset/tree/main/arrange_mouse",
+                    "MP4": "https://huggingface.co/datasets/Fanqi-Lin/GoPro-Raw-Videos/tree/main/pick_place_mouse"
                 },
                 "obs": ["Image", "Proprio"],
                 "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 150,
-                "n_envs": 1,
-                "license": "MIT"
+                "n_demos": 3564,
+                "n_envs": 32,
+                "license": "MIT",
+                "notes": "This first split corresponds to the dataset generated from all videos in env_{1~32}/object_1, with a total of 3,564 demos. The MP4 link contains 9,600 demos from 32 environments. In the first 16 environments, 4 different objects were collected, while in the remaining 16 environments, only 1 object was collected. Each object has 120 demos."
             },
             {
-                "task": "Closing The Lid (Real)",
+                "Project Link": "https://data-scaling-laws.github.io/",
+                "task": "Mouse Arrangement - Split 2",
                 "data_links": {
-                    "HDF5": "https://utexas.box.com/s/my5qagwcfdjs2t6wk9fl7rlb35cgvh1z"
+                    "Zarr": "https://huggingface.co/datasets/Fanqi-Lin/Processed-Task-Dataset/tree/main/arrange_mouse_16_env_4_object",
+                    "MP4": "https://huggingface.co/datasets/Fanqi-Lin/GoPro-Raw-Videos/tree/main/pick_place_mouse"
                 },
                 "obs": ["Image", "Proprio"],
                 "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 150,
-                "n_envs": 1,
-                "license": "MIT"
+                "n_demos": 6505,
+                "n_envs": 16,
+                "license": "MIT",
+                "notes": "This second split corresponds to the dataset generated from all videos in env_{1~16}/object_{1~4}, with a total of 6,505 demos. In the first 16 environments, 4 different objects were collected, while in the remaining 16 environments, only 1 object was collected. Each object has 120 demos."
             },
             {
-                "task": "Cup Shelving (Real)",
+                "Project Link": "https://data-scaling-laws.github.io/",
+                "task": "Fold Towels",
                 "data_links": {
-                    "HDF5": "https://utexas.box.com/s/bc6nd5xegqght0dsywdnts5k8k8py1jg"
+                    "Zarr": "https://huggingface.co/datasets/Fanqi-Lin/Processed-Task-Dataset/tree/main/fold_towel",
+                    "MP4": "https://huggingface.co/datasets/Fanqi-Lin/GoPro-Raw-Videos/tree/main/fold_towel"
                 },
                 "obs": ["Image", "Proprio"],
                 "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 150,
-                "n_envs": 1,
-                "license": "MIT"
+                "n_demos": 1752,
+                "n_envs": 32,
+                "license": "MIT",
+                "notes": "1,920 demos from 32 environments are included in the MP4 link, with 60 demos per environment. 1,752 valid demos of them are included in the Zarr file for policy learning."
             },
             {
-                "task": "Ladle Reorganization (Real)",
+                "Project Link": "https://data-scaling-laws.github.io/",
+                "task": "Unplug Charger",
                 "data_links": {
-                    "HDF5": "https://utexas.box.com/s/p971sf34sd8i5fwuwf47soojhp5788gb"
+                    "Zarr": "https://huggingface.co/datasets/Fanqi-Lin/Processed-Task-Dataset/tree/main/unplug_charger",
+                    "MP4": "https://huggingface.co/datasets/Fanqi-Lin/GoPro-Raw-Videos/tree/main/unplug_charger"
                 },
                 "obs": ["Image", "Proprio"],
                 "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 150,
-                "n_envs": 1,
-                "license": "MIT"
+                "n_demos": 1733,
+                "n_envs": 32,
+                "license": "MIT",
+                "notes": "1,920 demos from 32 environments are included in the MP4 link, with 60 demos per environment. 1,733 valid demos of them are included in the Zarr file for policy learning."
             },
 
             {
-                "Project": "ViTaMIn: Learning Contact-Rich Tasks Through Robot-Free Visuo-Tactile Manipulation Interface",
-                "Project Link": "https://chuanyune.github.io/ViTaMIn_page/",
-                "contact": ["fangchen_liu@berkeley.edu", "chuanyu.ne79@gmail.com"],
+                "Project": "UMI on Legs",
+                "Project Link": "https://umi-on-legs.github.io/",
+                "task": "Kettlebell Pushing",
+                "data_links": {
+                    "MP4": "https://real.stanford.edu/umi-on-legs/pushing_2024_05_29_huy/",
+                    "Zarr": "https://real.stanford.edu/umi-on-legs/pushing_2024_05_29_huy.zarr.zip"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 14,
+                "n_envs": 1,
+                "contact": "huyha@stanford.edu",
                 "license": "MIT",
-                "citation": `@article{liu2025vitamin,
-  title={ViTaMIn: Learning Contact-Rich Tasks Through Robot-Free Visuo-Tactile Manipulation Interface},
-  author={Liu, Fangchen and Li, Chuanyu and Qin, Yihua and Shaw, Ankit and Xu, Jing and Abbeel, Pieter and Chen, Rui},
-  journal={arXiv preprint arXiv:2504.06156},
-  year={2025}
-}`,
-                "task": "Orange Placement",
+                "citation": `@inproceedings{ha2024umilegs,
+  title={{UMI} on Legs: Making Manipulation Policies Mobile with Manipulation-Centric Whole-body Controllers},
+  author={Huy Ha and Yihuai Gao and Zipeng Fu and Jie Tan and Shuran Song},
+  year={2024},
+  booktitle={Proceedings of the 2024 Conference on Robot Learning},
+}`
+            },
+
+            {
+                "Project": "ManiWAV",
+                "Project Link": "https://mani-wav.github.io/",
+                "task": "Whiteboard Shape Wipe",
                 "data_links": {
-                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
+                    "Zarr": "https://real.stanford.edu/maniwav/data/wipe/replay_buffer.zarr.zip"
                 },
-                "obs": ["Image", "Proprio", "Tactile"],
+                "obs": ["Image", "Proprio", "Audio"],
                 "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 73,
+                "n_demos": 119,
                 "n_envs": 1,
+                "contact": "liuzeyi@stanford.edu",
+                "license": "MIT",
+                "citation": `@article{liu2024maniwav,
+    title={ManiWAV: Learning Robot Manipulation from In-the-Wild Audio-Visual Data},
+    author={Liu, Zeyi and Chi, Cheng and Cousineau, Eric and Kuppuswamy, Naveen and Burchfiel, Benjamin and Song, Shuran},
+    journal={arXiv preprint arXiv:2406.19464},
+    year={2024}
+}`
             },
             {
-                "task": "Sponge Insertion",
+                "task": "Flip bagel",
                 "data_links": {
-                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
+                    "Zarr": "https://real.stanford.edu/maniwav/data/flip/replay_buffer.zarr.zip"
                 },
-                "obs": ["Image", "Proprio", "Tactile"],
+                "obs": ["Image", "Proprio", "Audio"],
                 "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 138,
+                "n_demos": 283,
                 "n_envs": 1,
+                "license": "MIT",
             },
             {
-                "task": "Test Tube Reorientation",
+                "task": "Pour dice",
                 "data_links": {
-                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
+                    "Zarr": "https://real.stanford.edu/maniwav/data/pour/replay_buffer.zarr.zip"
                 },
-                "obs": ["Image", "Proprio", "Tactile"],
+                "obs": ["Image", "Proprio", "Audio"],
                 "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 125,
+                "n_demos": 145,
                 "n_envs": 1,
+                "license": "MIT",
             },
             {
-                "task": "Scissor Hanging",
+                "task": "Strap wires with velcro tape",
                 "data_links": {
-                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
+                    "Zarr": "https://real.stanford.edu/maniwav/data/velcro_tape/replay_buffer.zarr.zip"
                 },
-                "obs": ["Image", "Proprio", "Tactile"],
+                "obs": ["Image", "Proprio", "Audio"],
                 "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 137,
+                "n_demos": 193,
                 "n_envs": 1,
+                "license": "MIT",
             },
             {
-                "task": "Articulated Object Manipulation",
+                "task": "Flip bagel in the wild",
                 "data_links": {
-                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
+                    "MP4": "https://real.stanford.edu/maniwav/data/bagel_in_wild/demos/",
+                    "Zarr": "https://real.stanford.edu/maniwav/data/bagel_in_wild/replay_buffer.zarr.zip"
                 },
-                "obs": ["Image", "Proprio", "Tactile"],
+                "obs": ["Image", "Proprio", "Audio"],
                 "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 83,
+                "n_demos": 274,
+                "n_envs": 7,
+                "license": "MIT",
+            },
+
+            {
+                "Project": "UMI",
+                "Project Link": "https://umi-gripper.github.io/",
+                "task": "Bimanual Dish Washing",
+                "data_links": {
+                    "Zarr": "https://real.stanford.edu/umi/data/dish_washing/bimanual_dish_washing.zarr.zip",
+                    "MP4": "https://real.stanford.edu/umi/data/dish_washing/bimanual_dish_washing_mp4s.zip"
+                },
+                "obs": ["Image", "Proprio", "Bimanual"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 258,
                 "n_envs": 1,
+                "contact": "chuerpan@stanford.edu",
+                "license": "MIT",
+                "citation": `@inproceedings{chi2024universal,
+    title={Universal Manipulation Interface: In-The-Wild Robot Teaching Without In-The-Wild Robots},
+    author={Chi, Cheng and Xu, Zhenjia and Pan, Chuer and Cousineau, Eric and Burchfiel, Benjamin and Feng, Siyuan and Tedrake, Russ and Song, Shuran},
+    booktitle={Proceedings of Robotics: Science and Systems (RSS)},
+    year={2024}
+}`
             },
             {
-                "task": "Dynamic Peg Insertion",
+                "Project Link": "https://umi-gripper.github.io/",
+                "task": "Bimanual Cloth Folding",
                 "data_links": {
-                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
+                    "Zarr": "https://real.stanford.edu/umi/data/bimanual_cloth_folding/bimanual_cloth_folding.zarr.zip",
+                    "MP4": "https://real.stanford.edu/umi/data/bimanual_cloth_folding/bimanual_cloth_folding_mp4s.zip"
                 },
-                "obs": ["Image", "Proprio", "Tactile"],
+                "obs": ["Image", "Proprio", "Bimanual"],
                 "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 101,
+                "n_demos": 249,
                 "n_envs": 1,
+                "license": "MIT",
+                "notes": "372 demos in the mp4 zip for two demo collection sessions, 249 of them are included in the zarr file"
             },
             {
-                "task": "Articulated Object Manipulation",
+                "Project Link": "https://umi-gripper.github.io/",
+                "task": "Dynamic Tossing",
                 "data_links": {
-                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
+                    "Zarr": "https://real.stanford.edu/umi/data/dynamic_tossing/dynamic_tossing.zarr.zip",
+                    "MP4": "https://real.stanford.edu/umi/data/dynamic_tossing/dynamic_tossing_mp4s.zip"
                 },
                 "obs": ["Image", "Proprio"],
                 "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 83,
+                "n_demos": 284,
                 "n_envs": 1,
+                "license": "MIT",
+                "notes": "296 demos of 5 demo collection sessions are included in the mp4 zip, 284 of them are included in the zarr file"
             },
             {
-                "task": "Dynamic Peg Insertion",
+                "Project Link": "https://umi-gripper.github.io/",
+                "task": "Cup Arragement in the Lab",
                 "data_links": {
-                    "HuggingFace": "https://huggingface.co/datasets/chuanyune/ViTaMIn_dataset"
+                    "Zarr": "https://real.stanford.edu/umi/data/cup_arrangement/cup_in_the_lab.zarr.zip",
+                    "MP4": "https://real.stanford.edu/umi/data/cup_arrangement/cup_in_lab_mp4s.zip"
                 },
                 "obs": ["Image", "Proprio"],
                 "actions": ["6 DoF Movement", "Gripper Width"],
-                "n_demos": 101,
+                "n_demos": 305,
                 "n_envs": 1,
-            }
+                "license": "MIT",
+                "notes": "331 demos of 6 demo collection sessions are included in the mp4 zip, 305 of them are included in the zarr file"
+            },
+            {
+                "Project Link": "https://umi-gripper.github.io/",
+                "task": "Cup Arragement in the Wild",
+                "data_links": {
+                    "Zarr": "https://real.stanford.edu/umi/data/cup_in_the_wild/cup_in_the_wild.zarr.zip",
+                    "MP4": "https://real.stanford.edu/umi/data/cup_in_the_wild/cup_in_the_wild_mp4s.zip"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF Movement", "Gripper Width"],
+                "n_demos": 1447,
+                "n_envs": 30,
+                "license": "MIT",
+                "notes": "2795 demos from 71 environments are included in the mp4s.zip, 1447 of them for 30 envrionments are included in the zarr file for policy training"
+            },
         ];
 
 
