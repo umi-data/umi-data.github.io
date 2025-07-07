@@ -24,6 +24,72 @@
 
     <script>
         let rows = [
+            // DexUMI
+            {
+                "Project": "DexUMI",
+                "Project Link": "https://umi-data.github.io/",
+                "task": "Inspire Hand: Cube Picking",
+                "data_links": {
+                    "Zarr": "https://real.stanford.edu/dexumi/dataset/inspire/cube_picking.zip",
+                },
+                "obs": ["Image", "Proprio", "FSR"],
+                "actions": ["6 DoF movement", "Dexterous Hand Commands"],
+                "n_demos": 309,
+                "n_envs": 1,
+                "license": "MIT",
+                "contact": "mengdaxu@stanford.edu",
+                "citation": `@article{xu2025dexumi,
+  title={DexUMI: Using Human Hand as the Universal Manipulation Interface for Dexterous Manipulation},
+  author={Xu, Mengda and Zhang, Han and Hou, Yifan and Xu, Zhenjia and Fan, Linxi and Veloso, Manuela and Song, Shuran},
+  journal={arXiv preprint arXiv:2505.21864},
+  year={2025}
+}`,
+            },
+            {
+                "task": "Inspire Hand: Egg Carton",
+                "data_links": {
+                    "Zarr": "https://real.stanford.edu/dexumi/dataset/inspire/egg_carton.zip",
+                },
+                "obs": ["Image", "Proprio", "FSR"],
+                "actions": ["6 DoF movement", "Dexterous Hand Commands"],
+                "n_demos": 175,
+                "n_envs": 1,
+                "license": "MIT",
+            },
+            {
+                "task": "Inspire Hand: Tool Using",
+                "data_links": {
+                    "Zarr": "https://real.stanford.edu/dexumi/dataset/inspire/tool_use.zip",
+                },
+                "obs": ["Image", "Proprio", "FSR"],
+                "actions": ["6 DoF movement", "Dexterous Hand Commands"],
+                "n_demos": 404,
+                "n_envs": 1,
+                "license": "MIT",
+            },
+            {
+                "task": "XHand: Tool Using",
+                "data_links": {
+                    "Zarr": "https://real.stanford.edu/dexumi/dataset/xhand/tool_use.zip",
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF movement", "12 DoF Hand Actions"],
+                "n_demos": 440,
+                "n_envs": 1,
+                "license": "MIT",
+            },
+            {
+                "task": "XHand: Kitchen",
+                "data_links": {
+                    "Zarr": "https://real.stanford.edu/dexumi/dataset/xhand/kitchen.zip",
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF movement", "12 DoF Hand Actions"],
+                "n_demos": 464,
+                "n_envs": 1,
+                "license": "MIT",
+            },
+            // ViTaMIn
             {
                 "Project": "ViTaMIn: Learning Contact-Rich Tasks Through Robot-Free Visuo-Tactile Manipulation Interface",
                 "Project Link": "https://chuanyune.github.io/ViTaMIn_page/",
@@ -746,7 +812,6 @@
             },
         ];
 
-
         function generateTable(data) {
             let tableBody = document.querySelector("table tbody");
             tableBody.innerHTML = ""; // Clear existing content
@@ -814,7 +879,7 @@
                         span.classList.add("is-info");
                     } else if (obsItem.toLowerCase() === "bimanual") {
                         span.classList.add("is-success");
-                    } else if (obsItem.toLowerCase() === "audio") {
+                    } else if (obsItem.toLowerCase() === "audio" || obsItem.toLowerCase() === "tactile" || obsItem.toLowerCase() === "fsr") {
                         span.classList.add("is-danger");
                     }
                     span.textContent = obsItem;
@@ -834,6 +899,9 @@
                         span.classList.add("is-link", "is-light");
                     } else if (actionItem.toLowerCase() === "bimanual") {
                         span.classList.add("is-success", "is-light");
+                    }
+                    else if (actionItem.toLowerCase() === "dexterous hand commands") {
+                        span.classList.add("is-danger", "is-light");
                     }
                     span.textContent = actionItem;
                     return span;
