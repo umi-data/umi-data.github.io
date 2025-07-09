@@ -22,8 +22,160 @@
 
     <script>hljs.highlightAll();</script>
 
+    <!-- Project: DexWild: Dexterous Human Interactions for In-the-Wild Robot Policies (can just write DexWild for short), Website: dexwild.github.io
+License: MIT
+Citation: @article{tao2025dexwild,
+      title={DexWild: Dexterous Human Interactions for In-the-Wild Robot Policies},
+      author={Tao, Tony and Srirama, Mohan Kumar and Liu, Jason Jingzhou and Shaw, Kenneth and Pathak, Deepak},
+      journal={Robotics: Science and Systems (RSS)},
+      year={2025}}
+Contact person: Tony Tao, longtao@andrew.cmu.edu
+Metadata: I have it mostly organized on Hugging Face, but please reach out if you have questions. All tasks have Image as observation and 6DoF pose and Dexterous Hand Joints as "Action". Clothes folding and Florist are Bimanual Tasks, the others are single manual. 
+
+The episode counts and environments are below.
+Total: 9,505 Episodes across 5 tasks and 93 environments.
+Florist
+Human - 1,030 Episodes, 310,571 Transitions, 15 environments
+Robot - 248 Episodes, 92,954 Transitions, 3 Environments
+
+Clothes Folding
+Human - 1,123 Episodes, 294,367 Transitions, 12 Environments
+Robot - 295 Episodes, 123,385 Transitions, 3 Environments
+
+Spray
+Human - 2,820 Episodes, 886,460 Transitions, 30 Environments
+Robot - 388 Episodes, 162,862 Transitions, 4 Environments
+
+Toy Cleanup
+Human - 2,323 Episodes, 1,251,649 Transitions, 30 Environments
+Robot - 546 Episodes, 316,289 Transitions, 5 Environments
+
+Pouring
+Human - 621 Episodes, 181,541 Transitions, 6 Environments
+Robot - 111 Episodes, 30,880 Transitions, 1 Environment
+Link to Data: https://huggingface.co/datasets/boardd/dexwild-dataset  -->
+
     <script>
         let rows = [
+            // DexWild
+            {
+                "Project": "DexWild",
+                "Project Link": "https://dexwild.github.io/",
+                "task": "Florist (Human)",
+                "data_links": {
+                    "HuggingFace": "https://huggingface.co/datasets/boardd/dexwild-dataset/tree/main/florist_data/human",
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF movement", "Dexterous Hand Commands"],
+                "n_demos": 1030,
+                "n_envs": 15,
+                "license": "MIT",
+                "citation": `@article{tao2025dexwild,
+      title={DexWild: Dexterous Human Interactions for In-the-Wild Robot Policies},
+      author={Tao, Tony and Srirama, Mohan Kumar and Liu, Jason Jingzhou and Shaw, Kenneth and Pathak, Deepak},
+      journal={Robotics: Science and Systems (RSS)},
+      year={2025}}`,
+                "contact": "longtao@andrew.cmu.edu",
+                "notes": "All tasks have Image as observation and 6DoF pose and Dexterous Hand Joints as 'Action'. Clothes folding and Florist are Bimanual Tasks, the others are single manual."
+            },
+            {
+                "task": "Florist (Robot)",
+                "data_links": {
+                    "HuggingFace": "https://huggingface.co/datasets/boardd/dexwild-dataset/tree/main/florist_data/robot",
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF movement", "Dexterous Hand Commands"],
+                "n_demos": 248,
+                "n_envs": 3,
+                "license": "MIT",
+            },
+            {
+                "task": "Clothes Folding (Human)",
+                "data_links": {
+                    "HuggingFace": "https://huggingface.co/datasets/boardd/dexwild-dataset/tree/main/clothes_folding_data/human",
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF movement", "Dexterous Hand Commands"],
+                "n_demos": 1123,
+                "n_envs": 12,
+            },
+            {
+                "task": "Clothes Folding (Robot)",
+                "data_links": {
+                    "HuggingFace": "https://huggingface.co/datasets/boardd/dexwild-dataset/tree/main/clothes_folding_data/robot",
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF movement", "Dexterous Hand Commands"],
+                "n_demos": 295,
+                "n_envs": 3,
+                "license": "MIT",
+            },
+            {
+                "task": "Spray",
+                "data_links": {
+                    "HuggingFace": "https://huggingface.co/datasets/boardd/dexwild-dataset/tree/main/spray_data/human",
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF movement", "Dexterous Hand Commands"],
+                "n_demos": 2820,
+                "n_envs": 30,
+                "license": "MIT",
+            },
+            {
+                "task": "Spray (Robot)",
+                "data_links": {
+                    "HuggingFace": "https://huggingface.co/datasets/boardd/dexwild-dataset/tree/main/spray_data/robot",
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF movement", "Dexterous Hand Commands"],
+                "n_demos": 388,
+                "n_envs": 4,
+                "license": "MIT",
+            },
+            {
+                "task": "Toy Cleanup",
+                "data_links": {
+                    "HuggingFace": "https://huggingface.co/datasets/boardd/dexwild-dataset/tree/main/toy_cleanup_data/human",
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF movement", "Dexterous Hand Commands"],
+                "n_demos": 2323,
+                "n_envs": 30,
+                "license": "MIT",
+            },
+            {
+                "task": "Toy Cleanup (Robot)",
+                "data_links": {
+                    "HuggingFace": "https://huggingface.co/datasets/boardd/dexwild-dataset/tree/main/toy_cleanup_data/robot",
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF movement", "Dexterous Hand Commands"],
+                "n_demos": 546,
+                "n_envs": 5,
+                "license": "MIT",
+            },
+            {
+                "task": "Pouring",
+                "data_links": {
+                    "HuggingFace": "https://huggingface.co/datasets/boardd/dexwild-dataset/tree/main/pouring_data/human",
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF movement", "Dexterous Hand Commands"],
+                "n_demos": 621,
+                "n_envs": 6,
+                "license": "MIT",
+            },
+            {
+                "task": "Pouring (Robot)",
+                "data_links": {
+                    "HuggingFace": "https://huggingface.co/datasets/boardd/dexwild-dataset/tree/main/pouring_data/robot",
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF movement", "Dexterous Hand Commands"],
+                "n_demos": 111,
+                "n_envs": 1,
+                "license": "MIT",
+            },
             // DexUMI
             {
                 "Project": "DexUMI",
