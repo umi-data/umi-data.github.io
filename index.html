@@ -23,6 +23,82 @@
     <script>hljs.highlightAll();</script>
     <script>
         let rows = [
+            // ManipForce
+            {
+                "Project": "ManipForce: Force-Guided Policy Learning with Frequency-Aware Multimodal Transformer",
+                "Project Link": "https://sites.google.com/view/manipforce/",
+                "contact": "lghjayly@gm.gist.ac.kr",
+                "license": "MIT License",
+                "citation": `@article{lee2025manipforce,
+  title={ManipForce: Force-Guided Policy Learning with Frequency-Aware Representation for Contact-Rich Manipulation},
+  journal={arXiv preprint arXiv:2509.19047}, 
+  year={2025}
+}`,
+                "task": "Gear Assembly",
+                "data_links": {
+                    "Zarr": "https://drive.google.com/file/d/1xp4oWpiwtiqlyPAFymck2vCtmIlwp5St/view?usp=drive_link"
+                },
+                "obs": ["Image", "Wrist Force/Torque"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 101,
+                "n_envs": 1,
+                "notes": "All tasks collected in the same real-world setup."
+            },
+            {
+                "task": "LAN Plug Insertion",
+                "data_links": {
+                    "Zarr": "https://drive.google.com/file/d/1guFaDLcHSC4KAR6ZKASFTgtFYFHVR2QY/view?usp=drive_link"
+                },
+                "obs": ["Image (x2)", "Wrist Force/Torque"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 110,
+                "n_envs": 1,
+                "license": "MIT License"
+            },
+            {
+                "task": "Box Flipping",
+                "data_links": {
+                    "Zarr": "https://drive.google.com/file/d/1dLG6C_eU83GqNPb0TPXuTdYtUZiytz3w/view?usp=drive_link"
+                },
+                "obs": ["Image (x2)", "Wrist Force/Torque"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 69,
+                "n_envs": 1,
+                "license": "MIT License"
+            },
+            {
+                "task": "Open Lid",
+                "data_links": {
+                    "Zarr": "https://drive.google.com/file/d/1XDYeveOeoE5NtdHup5z32rGHtKq1z2MJ/view?usp=drive_link"
+                },
+                "obs": ["Image (x2)", "Wrist Force/Torque"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 102,
+                "n_envs": 1,
+                "license": "MIT License"
+            },
+            {
+                "task": "Battery Disassembly",
+                "data_links": {
+                    "Zarr": "https://drive.google.com/file/d/12QJuR_yrsMIRdqHXRVpO3uqMnF3YuV5S/view?usp=drive_link"
+                },
+                "obs": ["Image (x2)", "Wrist Force/Torque"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 108,
+                "n_envs": 1,
+                "license": "MIT License"
+            },
+            {
+                "task": "Battery Insertion",
+                "data_links": {
+                    "Zarr": "https://drive.google.com/file/d/1tx1xLhELkUJOb3JEZBpc6xfUtBFhgpfE/view?usp=drive_link"
+                },
+                "obs": ["Image (x2)", "Wrist Force/Torque"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 107,
+                "n_envs": 1,
+                "license": "MIT License"
+            },
             // Touch in the Wild
             {
                 "Project": "Touch in the Wild",
@@ -392,7 +468,7 @@
                 "data_links": {
                     "Zarr": "https://real.stanford.edu/dexumi/dataset/inspire/cube_picking.zip",
                 },
-                "obs": ["Image", "Proprio", "FSR"],
+                "obs": ["Image", "Proprio", "Force/Torque"],
                 "actions": ["6 DoF End Effector", "Dexterous Hand"],
                 "n_demos": 309,
                 "n_envs": 1,
@@ -410,7 +486,7 @@
                 "data_links": {
                     "Zarr": "https://real.stanford.edu/dexumi/dataset/inspire/egg_carton.zip",
                 },
-                "obs": ["Image", "Proprio", "FSR"],
+                "obs": ["Image", "Proprio", "Force/Torque"],
                 "actions": ["6 DoF End Effector", "Dexterous Hand"],
                 "n_demos": 175,
                 "n_envs": 1,
@@ -421,7 +497,7 @@
                 "data_links": {
                     "Zarr": "https://real.stanford.edu/dexumi/dataset/inspire/tool_use.zip",
                 },
-                "obs": ["Image", "Proprio", "FSR"],
+                "obs": ["Image", "Proprio", "Force/Torque"],
                 "actions": ["6 DoF End Effector", "Dexterous Hand"],
                 "n_demos": 404,
                 "n_envs": 1,
@@ -1233,13 +1309,13 @@
                 let obsTags = row["obs"].map(obsItem => {
                     let span = document.createElement("span");
                     span.classList.add("tag", "is-normal");
-                    if (obsItem.toLowerCase() === "image") {
+                    if (obsItem.toLowerCase().includes("image")) {
                         span.classList.add("is-primary");
-                    } else if (obsItem.toLowerCase() === "proprio") {
+                    } else if (obsItem.toLowerCase().includes("proprio")) {
                         span.classList.add("is-info");
-                    } else if (obsItem.toLowerCase() === "bimanual") {
+                    } else if (obsItem.toLowerCase().includes("bimanual")) {
                         span.classList.add("is-success");
-                    } else if (obsItem.toLowerCase() === "audio" || obsItem.toLowerCase() === "tactile" || obsItem.toLowerCase() === "fsr") {
+                    } else if (obsItem.toLowerCase().includes("audio") || obsItem.toLowerCase().includes("tactile") || obsItem.toLowerCase().includes("force/torque") || obsItem.toLowerCase().includes("force/torque")) {
                         span.classList.add("is-danger");
                     }
                     span.textContent = obsItem;
@@ -1499,7 +1575,7 @@
                                 Proprio, Audio, Bimanual), and the actions (e.g., 6 DoF End Effector, Parallel Gripper,
                                 Bimanual).</li>
                             <li><strong>Link to Data:</strong> A direct link to where each of the data formats
-                                can be accessed. For instance, the link for MP4 might be a google drive link, while the
+                                can be accessed. For instance, the link for MP4 might be a Zarr link, while the
                                 link for
                                 a Zarr file might be hosted on the project's webserver. If you're unsure of which data
                                 format to use,
