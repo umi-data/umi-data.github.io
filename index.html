@@ -23,6 +23,61 @@
     <script>hljs.highlightAll();</script>
     <script>
         let rows = [
+            // MV-UMI
+            {
+                "Project": "MV-UMI: A Scalable Multi-View Interface for Cross-Embodiment Learning",
+                "Project Link": "https://mv-umi.github.io",
+                "contact": "olr7742@nyu.edu",
+                "license": "MIT",
+                "citation": `@article{rayyan2025mv,
+  title={MV-UMI: A Scalable Multi-View Interface for Cross-Embodiment Learning},
+  author={Rayyan, Omar and Abanes, John and Hafez, Mahmoud and Tzes, Anthony and Abu-Dakka, Fares},
+  journal={arXiv preprint arXiv:2509.18757},
+  year={2025}
+}`,
+                "task": "Markers Placement (Raw View)",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/omarrayyann/mv-umi/blob/main/markers_placement_raw_data.zarr.zip"
+                },
+                "obs": ["Image"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 454,
+                "n_envs": 7,
+                "notes": "Include two views: wrist view, third-person <b>raw</b> view."
+            },
+            {
+                "task": "Markers Placement (Segmented View)",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/omarrayyann/mv-umi/blob/main/markers_placement_data.zarr.zip"
+                },
+                "obs": ["Image"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 454,
+                "n_envs": 7,
+                "notes": "Include two views: wrist view, third-person <b>segmented</b> view."
+            },
+            {
+                "task": "Bottles Rack (Segmented View)",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/omarrayyann/mv-umi/blob/main/bottles_rack_data.zarr.zip"
+                },
+                "obs": ["Image"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 199,
+                "n_envs": 1,
+                "notes": "Include two views: wrist view, third-person <b>segmented</b> view."
+            },
+            {
+                "task": "Cans Shelf Placement (Segmented View)",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/omarrayyann/mv-umi/blob/main/cans_shelf_placement.zip"
+                },
+                "obs": ["Image"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 263,
+                "n_envs": 1,
+                "notes": "Include two views: wrist view, third-person <b>segmented</b> view."
+            },
             // ManipForce
             {
                 "Project": "ManipForce: Force-Guided Policy Learning with Frequency-Aware Multimodal Transformer",
