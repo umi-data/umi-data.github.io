@@ -23,6 +23,100 @@
     <script>hljs.highlightAll();</script>
     <script>
         let rows = [
+            // exUMI
+            {
+                "Project": "exUMI",
+                "Project Link": "https://silicx.github.io/exUMI/",
+                "contact": "silicxuyue@outlook.com",
+                "license": "MIT",
+                "citation": `@inproceedings{xu2025exumi,
+  title={exUMI: Extensible Robot Teaching System with Action-aware Task-agnostic Tactile Representation},
+  author={Xu, Yue and Wei, Litao and An, Pengyu and Zhang, Qingyu and Li, Yong-Lu},
+  booktitle={Conference on Robot Learning},
+  pages={2536--2554},
+  year={2025},
+  organization={PMLR}
+}`,
+                "task": "Pick Cube",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/silicx/exUMI/blob/main/pick_cube.zarr.zip"
+                },
+                "obs": ["Image"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 208,
+                "n_envs": 8,
+                "notes": "Customized fingertip"
+            },
+            {
+                "task": "Pick Brocolli",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/silicx/exUMI/blob/main/pick_brocolli.zarr.zip"
+                },
+                "obs": ["Image", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 170,
+                "n_envs": 1,
+            },
+            {
+                "task": "Pick Carrot",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/silicx/exUMI/blob/main/pick_carrot.zarr.zip"
+                },
+                "obs": ["Image", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 135,
+                "n_envs": 2,
+            },
+            {
+                "task": "Stack Cube",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/silicx/exUMI/blob/main/stack_cube.zarr.zip"
+                },
+                "obs": ["Image", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 201,
+                "n_envs": 2,
+            },
+            {
+                "task": "Insert Pen",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/silicx/exUMI/blob/main/insert_pen.zarr.zip"
+                },
+                "obs": ["Image", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 139,
+                "n_envs": 2,
+            },
+            {
+                "task": "Open Bottle",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/silicx/exUMI/blob/main/open_bottle.zarr.zip"
+                },
+                "obs": ["Image", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 270,
+                "n_envs": 1,
+            },
+            {
+                "task": "Peg in Hole",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/silicx/exUMI/blob/main/peg_in_hole.zarr.zip"
+                },
+                "obs": ["Image", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 256,
+                "n_envs": 1,
+            },
+            {
+                "task": "Pull Drawer",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/silicx/exUMI/blob/main/pull_drawer.zarr.zip"
+                },
+                "obs": ["Image", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 281,
+                "n_envs": 4,
+            },
             // MV-UMI
             {
                 "Project": "MV-UMI: A Scalable Multi-View Interface for Cross-Embodiment Learning",
@@ -54,7 +148,6 @@
                 "actions": ["6 DoF End Effector", "Parallel Gripper"],
                 "n_demos": 454,
                 "n_envs": 7,
-                "notes": "Include two views: wrist view, third-person <b>segmented</b> view."
             },
             {
                 "task": "Bottles Rack (Segmented View)",
@@ -65,7 +158,6 @@
                 "actions": ["6 DoF End Effector", "Parallel Gripper"],
                 "n_demos": 199,
                 "n_envs": 1,
-                "notes": "Include two views: wrist view, third-person <b>segmented</b> view."
             },
             {
                 "task": "Cans Shelf Placement (Segmented View)",
@@ -76,7 +168,6 @@
                 "actions": ["6 DoF End Effector", "Parallel Gripper"],
                 "n_demos": 263,
                 "n_envs": 1,
-                "notes": "Include two views: wrist view, third-person <b>segmented</b> view."
             },
             // ManipForce
             {
