@@ -23,6 +23,77 @@
     <script>hljs.highlightAll();</script>
     <script>
         let rows = [
+            // HuMI
+            {
+                "Project": "HuMI",
+                "Project Link": "https://humanoid-manipulation-interface.github.io/",
+                "contact": ["nrq22@mails.tsinghua.edu.cn", "zhengby25@mails.tsinghua.edu.cn", "zhaojm25@mails.tsinghua.edu.cn"],
+                "license": "CC BY 4.0",
+                "citation": `@article{nai2026humanoid,
+  title={Humanoid Manipulation Interface: Humanoid Whole-Body Manipulation from Robot-Free Demonstrations},
+  author={Nai, Ruiqian and Zheng, Boyuan and Zhao, Junming and Zhu, Haodong and Dai, Sicong and Chen, Zunhao and Hu, Yihang and Hu, Yingdong and Zhang, Tong and Wen, Chuan and others},
+  journal={arXiv preprint arXiv:2602.06643},
+  year={2026}
+}`,
+                "task": "Marriage Proposal",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/Richard-Nai/HuMI-Zarrs/tree/main/proposal",
+                    "Raw Data": "https://huggingface.co/datasets/Richard-Nai/HuMI-Raw-Data/tree/main/proposal",
+                    "LeRobot": "https://huggingface.co/datasets/Richard-Nai/HuMI-Proposal"
+                },
+                "obs": ["Image", "Proprio", "Bimanual"],
+                "actions": ["6 DoF Poses", "Parallel Gripper", "Bimanual", "Pelvis", "Feet"],
+                "n_demos": 103,
+                "n_envs": 1,
+            },
+            {
+                "task": "Walk & Clean Table",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/Richard-Nai/HuMI-Zarrs/tree/main/walk-clean-table",
+                    "Raw Data": "https://huggingface.co/datasets/Richard-Nai/HuMI-Raw-Data/tree/main/walk-clean-table",
+                    "LeRobot": "https://huggingface.co/datasets/Richard-Nai/HuMI-Walk-Clean-Table"
+                },
+                "obs": ["Image", "Proprio", "Bimanual"],
+                "actions": ["6 DoF Poses", "Parallel Gripper", "Bimanual", "Pelvis", "Feet"],
+                "n_demos": 105,
+                "n_envs": 1,
+            },
+            {
+                "task": "Unsheathe Sword",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/Richard-Nai/HuMI-Zarrs/tree/main/unsheathe",
+                    "Raw Data": "https://huggingface.co/datasets/Richard-Nai/HuMI-Raw-Data/tree/main/unsheathe-sword",
+                    "LeRobot": "https://huggingface.co/datasets/Richard-Nai/HuMI-Unsheathe"
+                },
+                "obs": ["Image", "Proprio", "Bimanual"],
+                "actions": ["6 DoF Poses", "Parallel Gripper", "Bimanual", "Pelvis", "Feet"],
+                "n_demos": 105,
+                "n_envs": 1,
+            },
+            {
+                "task": "Dynamic Toss",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/Richard-Nai/HuMI-Zarrs/tree/main/toss",
+                    "Raw Data": "https://huggingface.co/datasets/Richard-Nai/HuMI-Raw-Data/tree/main/toss",
+                    "LeRobot": "https://huggingface.co/datasets/Richard-Nai/HuMI-Toss"
+                },
+                "obs": ["Image", "Proprio", "Bimanual"],
+                "actions": ["6 DoF Poses", "Parallel Gripper", "Bimanual", "Pelvis", "Feet"],
+                "n_demos": 104,
+                "n_envs": 1,
+            },
+            {
+                "task": "Squat & Pick Ground",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/Richard-Nai/HuMI-Zarrs/tree/main/squat-pick-ground",
+                    "Raw Data": "https://huggingface.co/datasets/Richard-Nai/HuMI-Raw-Data/tree/main/squat-pick-ground",
+                    "LeRobot": "https://huggingface.co/datasets/Richard-Nai/HuMI-Squat-Pick-Ground"
+                },
+                "obs": ["Image", "Proprio", "Bimanual"],
+                "actions": ["6 DoF Poses", "Parallel Gripper", "Bimanual", "Pelvis", "Feet"],
+                "n_demos": 410,
+                "n_envs": 7,
+            },
             // exUMI
             {
                 "Project": "exUMI",
