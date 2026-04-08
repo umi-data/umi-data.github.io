@@ -1,0 +1,114 @@
+[
+  {
+    "name": "UMI",
+    "x_txt": "2024-02-17T19:09:05",
+    "y_txt": 13.778367736185423,
+    "ha": "center",
+    "va": "bottom"
+  },
+  {
+    "name": "ManiWav",
+    "x_txt": "2024-05-07T20:23:35",
+    "y_txt": 28.071239614051393,
+    "ha": "right",
+    "va": "center"
+  },
+  {
+    "name": "UMI on Legs",
+    "x_txt": "2024-06-27T15:03:48",
+    "y_txt": 41.35331678156526,
+    "ha": "right",
+    "va": "center"
+  },
+  {
+    "name": "Fast-UMI",
+    "x_txt": "2024-11-16T01:47:08",
+    "y_txt": 12.283110150780196,
+    "ha": "left",
+    "va": "center"
+  },
+  {
+    "name": "Data Scaling Laws",
+    "x_txt": "2024-08-28T20:31:55",
+    "y_txt": 55.367924250244215,
+    "ha": "right",
+    "va": "center"
+  },
+  {
+    "name": "LEGATO",
+    "x_txt": "2024-10-02T06:55:43",
+    "y_txt": 69.15584054503532,
+    "ha": "right",
+    "va": "center"
+  },
+  {
+    "name": "ViTaMIn",
+    "x_txt": "2025-05-27T19:12:48",
+    "y_txt": 20.30247749720366,
+    "ha": "center",
+    "va": "top"
+  },
+  {
+    "name": "DexWild",
+    "x_txt": "2025-02-20T22:25:23",
+    "y_txt": 51.4005362422146,
+    "ha": "right",
+    "va": "center"
+  },
+  {
+    "name": "DexUMI",
+    "x_txt": "2025-03-19T14:57:33",
+    "y_txt": 66.49927681577752,
+    "ha": "right",
+    "va": "center"
+  },
+  {
+    "name": "Touch in the Wild",
+    "x_txt": "2025-06-08T01:27:40",
+    "y_txt": 82.99808694317365,
+    "ha": "right",
+    "va": "center"
+  },
+  {
+    "name": "exUMI",
+    "x_txt": "2025-10-26T01:01:31",
+    "y_txt": 26.923605536374264,
+    "ha": "left",
+    "va": "center"
+  },
+  {
+    "name": "MV-UMI",
+    "x_txt": "2025-12-19T20:20:32",
+    "y_txt": 43.3627968798736,
+    "ha": "left",
+    "va": "center"
+  },
+  {
+    "name": "ManipForce",
+    "x_txt": "2025-12-28T15:30:31",
+    "y_txt": 55.91176084068502,
+    "ha": "left",
+    "va": "center"
+  },
+  {
+    "name": "FastUMI-100K",
+    "x_txt": "2025-08-12T13:28:47",
+    "y_txt": 141.3729773507979,
+    "ha": "right",
+    "va": "center"
+  },
+  {
+    "name": "ViTaMIn-B",
+    "x_txt": "2026-01-17T15:42:37",
+    "y_txt": 121.57516421431491,
+    "ha": "center",
+    "va": "top"
+  },
+  {
+    "name": "HuMI",
+    "x_txt": "2026-03-02T12:06:33",
+    "y_txt": 137.36329367758606,
+    "ha": "center",
+    "va": "top"
+  }
+]
