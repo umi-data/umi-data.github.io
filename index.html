@@ -27,6 +27,7 @@
             {
                 "Project": "HuMI",
                 "Project Link": "https://humanoid-manipulation-interface.github.io/",
+                "release_date": "2026-02-06",
                 "contact": ["nrq22@mails.tsinghua.edu.cn", "zhengby25@mails.tsinghua.edu.cn", "zhaojm25@mails.tsinghua.edu.cn"],
                 "license": "CC BY 4.0",
                 "citation": `@article{nai2026humanoid,
@@ -98,6 +99,7 @@
             {
                 "Project": "exUMI",
                 "Project Link": "https://silicx.github.io/exUMI/",
+                "release_date": "2025-09-18",
                 "contact": "silicxuyue@outlook.com",
                 "license": "MIT",
                 "citation": `@inproceedings{xu2025exumi,
@@ -188,10 +190,66 @@
                 "n_demos": 281,
                 "n_envs": 4,
             },
+            
+            // ViTaMIn-B
+            {
+                "Project": "ViTaMIn-B",
+                "Project Link": "https://chuanyune.github.io/ViTaMIn-B_page/",
+                "release_date": "2025-11-08",
+                "contact": ["chuanyu.ne79@gmail.com"],
+                "license": "MIT",
+                "citation": `@article{li2025vitamin,
+title={ViTaMIn-B: A Reliable and Efficient Visuo-Tactile Bimanual Manipulation Interface},
+author={Li, Chuanyu and Liu, Chaoyi and Wang, Daotan and Zhang, Shuyu and Li, Lusong and Zeng, Zecui and Liu, Fangchen and Xu, Jing and Chen, Rui},
+journal={arXiv preprint arXiv:2511.05858},
+year={2025}
+}`,
+                "task": "Weight Placement",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/chuanyune/ViTaMIn-B_data_and_ckpt/tree/main"
+                },
+                "obs": ["Image", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 123,
+                "n_envs": 1,
+            },
+
+            {
+                "task": "Bean Scooping",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/chuanyune/ViTaMIn-B_data_and_ckpt/tree/main"
+                },
+                "obs": ["Image", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 345,
+                "n_envs": 1,
+            },
+
+            {
+                "task": "Cube Storage",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/chuanyune/ViTaMIn-B_data_and_ckpt/tree/main"
+                },
+                "obs": ["Image", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 195,
+                "n_envs": 1,
+            },
+            {
+                "task": "Beaker Wiping",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/chuanyune/ViTaMIn-B_data_and_ckpt/tree/main"
+                },
+                "obs": ["Image", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 181,
+                "n_envs": 1,
+            },
             // MV-UMI
             {
                 "Project": "MV-UMI: A Scalable Multi-View Interface for Cross-Embodiment Learning",
                 "Project Link": "https://mv-umi.github.io",
+                "release_date": "2025-09-23",
                 "contact": "olr7742@nyu.edu",
                 "license": "MIT",
                 "citation": `@article{rayyan2025mv,
@@ -244,6 +302,7 @@
             {
                 "Project": "ManipForce: Force-Guided Policy Learning with Frequency-Aware Multimodal Transformer",
                 "Project Link": "https://sites.google.com/view/manipforce/",
+                "release_date": "2025-09-23",
                 "contact": "lghjayly@gm.gist.ac.kr",
                 "license": "MIT License",
                 "citation": `@article{lee2025manipforce,
@@ -321,6 +380,7 @@
             {
                 "Project": "Touch in the Wild",
                 "Project Link": "https://binghao-huang.github.io/touch_in_the_wild/",
+                "release_date": "2025-07-20",
                 "task": "Campus",
                 "data_links": {
                     "HuggingFace": "https://huggingface.co/datasets/binghaohuang-robot/touch_in_the_wild-dataset/tree/main/in_the_wild_data/campus"
@@ -563,6 +623,7 @@
             {
                 "Project": "DexWild",
                 "Project Link": "https://dexwild.github.io/",
+                "release_date": "2025-05-12",
                 "task": "Florist (Human)",
                 "data_links": {
                     "HuggingFace": "https://huggingface.co/datasets/boardd/dexwild-dataset/tree/main/florist_data/human",
@@ -682,6 +743,7 @@
             {
                 "Project": "DexUMI",
                 "Project Link": "https://umi-data.github.io/",
+                "release_date": "2025-05-28",
                 "task": "Inspire Hand: Cube Picking",
                 "data_links": {
                     "Zarr": "https://real.stanford.edu/dexumi/dataset/inspire/cube_picking.zip",
@@ -747,6 +809,7 @@
             {
                 "Project": "ViTaMIn: Learning Contact-Rich Tasks Through Robot-Free Visuo-Tactile Manipulation Interface",
                 "Project Link": "https://chuanyune.github.io/ViTaMIn_page/",
+                "release_date": "2025-04-08",
                 "contact": ["fangchen_liu@berkeley.edu", "chuanyu.ne79@gmail.com"],
                 "license": "MIT",
                 "citation": `@article{liu2025vitamin,
@@ -837,6 +900,7 @@
             {
                 "Project": "LEGATO",
                 "Project Link": "https://ut-hcrl.github.io/LEGATO/",
+                "release_date": "2024-11-06",
                 "contact": "mingyo@utexas.edu",
                 "license": "MIT",
                 "citation": `@article{seo2024legato,
@@ -922,6 +986,7 @@
             {
                 "Project": "Fast-UMI",
                 "Project Link": "https://fastumi.com/",
+                "release_date": "2024-09-29",
                 "contact": "zxzmkufufu@gmail.com",
                 "license": "MIT",
                 "citation": `@article{wu2024fast,
@@ -1192,21 +1257,11 @@
             },
 
 
-            {
-                "task": "Tennis Ball Basket Toss",
-                "data_links": {
-                    "MP4": "https://real.stanford.edu/umi-on-legs/tossing/",
-                    "Zarr": "https://real.stanford.edu/umi-on-legs/tossing.zarr.zip"
-                },
-                "obs": ["Image", "Proprio"],
-                "actions": ["6 DoF End Effector", "Parallel Gripper"],
-                "n_demos": 500,
-                "n_envs": 1,
-                "license": "MIT",
-            },
+
             {
                 "Project": "Data Scaling Laws",
                 "Project Link": "https://data-scaling-laws.github.io/",
+                "release_date": "2024-10-24",
                 "contact": ["lfq24@mails.tsinghua.edu.cn", "huyd21@mails.tsinghua.edu.cn"],
                 "license": "MIT",
                 "citation": `@article{lin2024data,
@@ -1302,6 +1357,7 @@
             {
                 "Project": "UMI on Legs",
                 "Project Link": "https://umi-on-legs.github.io/",
+                "release_date": "2024-07-14",
                 "task": "Kettlebell Pushing",
                 "data_links": {
                     "MP4": "https://real.stanford.edu/umi-on-legs/pushing_2024_05_29_huy/",
@@ -1320,10 +1376,22 @@
   booktitle={Proceedings of the 2024 Conference on Robot Learning},
 }`
             },
-
+            {
+                "task": "Tennis Ball Basket Toss",
+                "data_links": {
+                    "MP4": "https://real.stanford.edu/umi-on-legs/tossing/",
+                    "Zarr": "https://real.stanford.edu/umi-on-legs/tossing.zarr.zip"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 500,
+                "n_envs": 1,
+                "license": "MIT",
+            },
             {
                 "Project": "ManiWAV",
                 "Project Link": "https://mani-wav.github.io/",
+                "release_date": "2024-06-27",
                 "task": "Whiteboard Shape Wipe",
                 "data_links": {
                     "Zarr": "https://real.stanford.edu/maniwav/data/wipe/replay_buffer.zarr.zip"
@@ -1390,6 +1458,7 @@
             {
                 "Project": "UMI",
                 "Project Link": "https://umi-gripper.github.io/",
+                "release_date": "2024-02-15",
                 "task": "Bimanual Dish Washing",
                 "data_links": {
                     "Zarr": "https://real.stanford.edu/umi/data/dish_washing/bimanual_dish_washing.zarr.zip",
