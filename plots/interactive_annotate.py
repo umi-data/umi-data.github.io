@@ -31,7 +31,7 @@ from matplotlib.widgets import Button
 from datetime import datetime, timedelta
 import numpy as np
 
-CONFIG_FILE = "annotation_config.json"
+CONFIG_FILE = "plots/annotation_config.json"
 
 # ── Data ─────────────────────────────────────────────────────────────────────
 projects = [

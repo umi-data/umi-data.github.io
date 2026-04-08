@@ -1,8 +1,11 @@
+import os
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from datetime import datetime, timedelta
 import numpy as np
 from interactive_annotate import apply_config
+
+HERE = os.path.dirname(os.path.abspath(__file__))
 
 # ── Data (from index.html) ────────────────────────────────────────────────────
 projects = [
@@ -248,7 +251,7 @@ for i, name in enumerate(names):
                 annotation_clip=False)
 
 plt.tight_layout()
-plt.savefig("stat.png", dpi=150, bbox_inches="tight", facecolor="white")
-plt.savefig("stat.pdf", bbox_inches="tight", facecolor="white")
+plt.savefig(os.path.join(HERE, "stat.png"), dpi=150, bbox_inches="tight", facecolor="white")
+plt.savefig(os.path.join(HERE, "stat.pdf"), bbox_inches="tight", facecolor="white")
 plt.show()
 print(f"Saved stat.png / stat.pdf  (total {cumulative[-1]:,} demos, {len(projects)} projects)")
