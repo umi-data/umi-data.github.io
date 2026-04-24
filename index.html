@@ -23,6 +23,67 @@
     <script>hljs.highlightAll();</script>
     <script>
         let rows = [
+            // TAMEn
+            {
+                "Project": "TAMEn: Tactile-Aware Manipulation Engine for Closed-Loop Data Collection in Contact-Rich Tasks",
+                "Project Link": "https://opendrivelab.com/TAMEn",
+                "contact": "im.longyanwu@gmail.com",
+                "license": "CC BY-NC-SA 4.0",
+                "citation": `@misc{wu2026tamentactileawaremanipulationengine,
+      title={TAMEn: Tactile-Aware Manipulation Engine for Closed-Loop Data Collection in Contact-Rich Tasks},
+      author={Longyan Wu and Jieji Ren and Chenghang Jiang and Junxi Zhou and Shijia Peng and Ran Huang and Guoying Gu and Li Chen and Hongyang Li},
+      year={2026},
+      eprint={2604.07335},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2604.07335},
+}`,
+                "task": "Cable Mounting",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab-org/TAMEn/tree/main/Cable_Mounting"
+                },
+                "obs": ["Image", "Proprio", "Bimanual", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 271,
+                "n_envs": 1,
+                "notes": "713 total demonstrations across 4 contact-rich tasks. The CAD model will be open-sourced soon on the project website."
+            },
+            {
+                "Project Link": "https://opendrivelab.com/TAMEn",
+                "task": "Binder Clip Removal",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab-org/TAMEn/tree/main/Binder_Clip_Removal"
+                },
+                "obs": ["Image", "Proprio", "Bimanual", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 159,
+                "n_envs": 1,
+                "license": "CC BY-NC-SA 4.0",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/TAMEn",
+                "task": "Dish Washing",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab-org/TAMEn/tree/main/Dish_Washing"
+                },
+                "obs": ["Image", "Proprio", "Bimanual", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 148,
+                "n_envs": 1,
+                "license": "CC BY-NC-SA 4.0",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/TAMEn",
+                "task": "Herbal Transfer",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab-org/TAMEn/tree/main/Herbal_Transfer"
+                },
+                "obs": ["Image", "Proprio", "Bimanual", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 146,
+                "n_envs": 1,
+                "license": "CC BY-NC-SA 4.0",
+            },
             // HuMI
             {
                 "Project": "HuMI",
