@@ -23,6 +23,60 @@
     <script>hljs.highlightAll();</script>
     <script>
         let rows = [
+            // UMI-3D
+            {
+                "Project": "UMI-3D: Extending Universal Manipulation Interface from Vision-Limited to 3D Spatial Perception",
+                "Project Link": "https://umi-3d.github.io/",
+                "contact": ["zimingwang@connect.hku.hk", "zimingwang@mail.ustc.edu.cn"],
+                "license": "MIT",
+                "citation": `@misc{wang2026umi3dextendinguniversalmanipulation,
+  title={UMI-3D: Extending Universal Manipulation Interface from Vision-Limited to 3D Spatial Perception},
+  author={Ziming Wang},
+  year={2026},
+  eprint={2604.14089},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2604.14089}
+}`,
+                "task": "Cup-to-Saucer Placement",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/ZIMBOT/umi-3d-dataset-cup",
+                    "Rosbag": "https://pan.baidu.com/s/1ukL6oDFspRRjbqr6Vdy5VQ?pwd=kyg6"
+                },
+                "obs": ["Image", "Proprio", "Point Cloud"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 3500,
+                "n_envs": 4,
+                "notes": "UMI-3D extends UMI with LiDAR-enhanced data collection for robust trajectory estimation in challenging real-world environments (e.g., textureless surfaces, dynamic scenes, occlusions). The dataset remains fully compatible with existing UMI pipelines and supports image-only policy learning. Pretrained policy: <a href=\"https://huggingface.co/ZIMBOT/umi-3d-policy-cup\">umi-3d-policy-cup</a>."
+            },
+            {
+                "Project Link": "https://umi-3d.github.io/",
+                "task": "Curtain Pulling",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/ZIMBOT/umi-3d-dataset-curtain",
+                    "Rosbag": "https://pan.baidu.com/s/1-ZTBTXOFqplpWlRUnBSAIQ?pwd=4m3j"
+                },
+                "obs": ["Image", "Proprio", "Point Cloud"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 769,
+                "n_envs": 3,
+                "license": "MIT",
+                "notes": "Pretrained policy: <a href=\"https://huggingface.co/ZIMBOT/umi-3d-policy-curtain\">umi-3d-policy-curtain</a>."
+            },
+            {
+                "Project Link": "https://umi-3d.github.io/",
+                "task": "Door Opening and Cup Placement",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/ZIMBOT/umi-3d-dataset-door-cup",
+                    "Rosbag": "https://pan.baidu.com/s/1QVurpNRc9u0ERTpR_iixhg?pwd=k5nb"
+                },
+                "obs": ["Image", "Proprio", "Point Cloud"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 340,
+                "n_envs": 1,
+                "license": "MIT",
+                "notes": "Pretrained policy: <a href=\"https://huggingface.co/ZIMBOT/umi-3d-policy-door-cup\">umi-3d-policy-door-cup</a>."
+            },
             // TAMEn
             {
                 "Project": "TAMEn: Tactile-Aware Manipulation Engine for Closed-Loop Data Collection in Contact-Rich Tasks",
@@ -1996,6 +2050,8 @@ year={2025}
                         span.classList.add("is-success");
                     } else if (obsItem.toLowerCase().includes("audio") || obsItem.toLowerCase().includes("tactile") || obsItem.toLowerCase().includes("force/torque") || obsItem.toLowerCase().includes("force/torque")) {
                         span.classList.add("is-danger");
+                    } else if (obsItem.toLowerCase().includes("point cloud") || obsItem.toLowerCase().includes("lidar")) {
+                        span.classList.add("is-warning");
                     }
                     span.textContent = obsItem;
                     return span;
