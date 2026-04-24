@@ -88,6 +88,7 @@
             {
                 "Project": "HuMI",
                 "Project Link": "https://humanoid-manipulation-interface.github.io/",
+                "release_date": "2026-02-06",
                 "contact": ["nrq22@mails.tsinghua.edu.cn", "zhengby25@mails.tsinghua.edu.cn", "zhaojm25@mails.tsinghua.edu.cn"],
                 "license": "CC BY 4.0",
                 "citation": `@article{nai2026humanoid,
@@ -159,6 +160,7 @@
             {
                 "Project": "exUMI",
                 "Project Link": "https://silicx.github.io/exUMI/",
+                "release_date": "2025-09-18",
                 "contact": "silicxuyue@outlook.com",
                 "license": "MIT",
                 "citation": `@inproceedings{xu2025exumi,
@@ -249,10 +251,66 @@
                 "n_demos": 281,
                 "n_envs": 4,
             },
+            
+            // ViTaMIn-B
+            {
+                "Project": "ViTaMIn-B",
+                "Project Link": "https://chuanyune.github.io/ViTaMIn-B_page/",
+                "release_date": "2025-11-08",
+                "contact": ["chuanyu.ne79@gmail.com"],
+                "license": "MIT",
+                "citation": `@article{li2025vitamin,
+title={ViTaMIn-B: A Reliable and Efficient Visuo-Tactile Bimanual Manipulation Interface},
+author={Li, Chuanyu and Liu, Chaoyi and Wang, Daotan and Zhang, Shuyu and Li, Lusong and Zeng, Zecui and Liu, Fangchen and Xu, Jing and Chen, Rui},
+journal={arXiv preprint arXiv:2511.05858},
+year={2025}
+}`,
+                "task": "Weight Placement",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/chuanyune/ViTaMIn-B_data_and_ckpt/tree/main"
+                },
+                "obs": ["Image", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 123,
+                "n_envs": 1,
+            },
+
+            {
+                "task": "Bean Scooping",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/chuanyune/ViTaMIn-B_data_and_ckpt/tree/main"
+                },
+                "obs": ["Image", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 345,
+                "n_envs": 1,
+            },
+
+            {
+                "task": "Cube Storage",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/chuanyune/ViTaMIn-B_data_and_ckpt/tree/main"
+                },
+                "obs": ["Image", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 195,
+                "n_envs": 1,
+            },
+            {
+                "task": "Beaker Wiping",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/chuanyune/ViTaMIn-B_data_and_ckpt/tree/main"
+                },
+                "obs": ["Image", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 181,
+                "n_envs": 1,
+            },
             // MV-UMI
             {
                 "Project": "MV-UMI: A Scalable Multi-View Interface for Cross-Embodiment Learning",
                 "Project Link": "https://mv-umi.github.io",
+                "release_date": "2025-09-23",
                 "contact": "olr7742@nyu.edu",
                 "license": "MIT",
                 "citation": `@article{rayyan2025mv,
@@ -305,6 +363,7 @@
             {
                 "Project": "ManipForce: Force-Guided Policy Learning with Frequency-Aware Multimodal Transformer",
                 "Project Link": "https://sites.google.com/view/manipforce/",
+                "release_date": "2025-09-23",
                 "contact": "lghjayly@gm.gist.ac.kr",
                 "license": "MIT License",
                 "citation": `@article{lee2025manipforce,
@@ -382,6 +441,7 @@
             {
                 "Project": "Touch in the Wild",
                 "Project Link": "https://binghao-huang.github.io/touch_in_the_wild/",
+                "release_date": "2025-07-20",
                 "task": "Campus",
                 "data_links": {
                     "HuggingFace": "https://huggingface.co/datasets/binghaohuang-robot/touch_in_the_wild-dataset/tree/main/in_the_wild_data/campus"
@@ -624,6 +684,7 @@
             {
                 "Project": "DexWild",
                 "Project Link": "https://dexwild.github.io/",
+                "release_date": "2025-05-12",
                 "task": "Florist (Human)",
                 "data_links": {
                     "HuggingFace": "https://huggingface.co/datasets/boardd/dexwild-dataset/tree/main/florist_data/human",
@@ -743,6 +804,7 @@
             {
                 "Project": "DexUMI",
                 "Project Link": "https://umi-data.github.io/",
+                "release_date": "2025-05-28",
                 "task": "Inspire Hand: Cube Picking",
                 "data_links": {
                     "Zarr": "https://real.stanford.edu/dexumi/dataset/inspire/cube_picking.zip",
@@ -808,6 +870,7 @@
             {
                 "Project": "ViTaMIn: Learning Contact-Rich Tasks Through Robot-Free Visuo-Tactile Manipulation Interface",
                 "Project Link": "https://chuanyune.github.io/ViTaMIn_page/",
+                "release_date": "2025-04-08",
                 "contact": ["fangchen_liu@berkeley.edu", "chuanyu.ne79@gmail.com"],
                 "license": "MIT",
                 "citation": `@article{liu2025vitamin,
@@ -898,6 +961,7 @@
             {
                 "Project": "LEGATO",
                 "Project Link": "https://ut-hcrl.github.io/LEGATO/",
+                "release_date": "2024-11-06",
                 "contact": "mingyo@utexas.edu",
                 "license": "MIT",
                 "citation": `@article{seo2024legato,
@@ -983,6 +1047,7 @@
             {
                 "Project": "Fast-UMI",
                 "Project Link": "https://fastumi.com/",
+                "release_date": "2024-09-29",
                 "contact": "zxzmkufufu@gmail.com",
                 "license": "MIT",
                 "citation": `@article{wu2024fast,
@@ -1252,22 +1317,343 @@
                 "license": "MIT"
             },
 
-
+            // FastUMI-100K; TODO: confirm license
             {
-                "task": "Tennis Ball Basket Toss",
+                "Project": "FastUMI-100K",
+                "Project Link": "https://github.com/MrKeee/FastUMI-100K",
+                "release_date": "2025-10-09",
+                "contact": "liukehui@pjlab.org.cn",
+                "license": "",
+                "citation": `@article{liu2025fastumi100k,
+    title={FastUMI-100K: Advancing Data-driven Robotic Manipulation with a Large-scale UMI-style Dataset},
+    author={Liu, Kehui and Jia, Zhongjie and Li, Yang and Zhaxizhuoma and Chen, Pengan and Liu, Song and Liu, Xin and Zhang, Pingrui and Song, Haoming and Ye, Xinyi and others},
+    journal={arXiv preprint arXiv:2510.08022},
+    year={2025}
+}`,
+                "task": "Prepare Tableware",
                 "data_links": {
-                    "MP4": "https://real.stanford.edu/umi-on-legs/tossing/",
-                    "Zarr": "https://real.stanford.edu/umi-on-legs/tossing.zarr.zip"
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/single_arm/Prepare_tableware"
                 },
                 "obs": ["Image", "Proprio"],
                 "actions": ["6 DoF End Effector", "Parallel Gripper"],
-                "n_demos": 500,
+                "n_demos": 3368,
                 "n_envs": 1,
-                "license": "MIT",
             },
+            {
+                "task": "Store Shoes in Shoe Cabinet",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/single_arm/Store_Shoes_in_Shoe_Cabinet"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 3343,
+                "n_envs": 1,
+            },
+            {
+                "task": "Get Plate and Spoon from Dish Rack",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/single_arm/get_plate_and_spoon_from_dish_rack"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 3611,
+                "n_envs": 1,
+            },
+            {
+                "task": "Heat Food in Microwave",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/single_arm/heat_food_in_microwave"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 3156,
+                "n_envs": 1,
+            },
+            {
+                "task": "Heat Food in Toaster Oven",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/single_arm/heat_food_in_toaster_oven"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 4036,
+                "n_envs": 1,
+            },
+            {
+                "task": "Iron Clothes",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/single_arm/iron_clothes"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 2541,
+                "n_envs": 1,
+            },
+            {
+                "task": "Make Sandwich",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/single_arm/make_sandwich"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 3104,
+                "n_envs": 1,
+            },
+            {
+                "task": "Open Toilet Lid",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/single_arm/open_toilet_lid"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 2869,
+                "n_envs": 1,
+            },
+            {
+                "task": "Pour Water into Cup",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/single_arm/pour_water_into_cup"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 4206,
+                "n_envs": 1,
+            },
+            {
+                "task": "Put Shoes into Storage Box",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/single_arm/put_shoes_into_storage_box"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 4384,
+                "n_envs": 1,
+            },
+            {
+                "task": "Take Items out of Drawer",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/single_arm/take_items_out_of_drawer"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 4137,
+                "n_envs": 1,
+            },
+            {
+                "task": "Wash Clothes",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/single_arm/wash_clothes"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 3244,
+                "n_envs": 1,
+            },
+            {
+                "task": "Add Rice to Rice Cooker",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/dual_arm/Add_Rice_to_Rice_Cooker"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 3748,
+                "n_envs": 1,
+            },
+            {
+                "task": "Arrange Toothbrush and Toothpaste",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/dual_arm/Arrange_Toothbrush_and_Toothpaste"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 3952,
+                "n_envs": 1,
+            },
+            {
+                "task": "Clean Desktop",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/dual_arm/Clean_Desktop"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 2147,
+                "n_envs": 1,
+            },
+            {
+                "task": "Dispose of Desktop Debris",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/dual_arm/Dispose_of_Desktop_Debris"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 2864,
+                "n_envs": 1,
+            },
+            {
+                "task": "Fold the Jeans",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/dual_arm/Fold_the_Jeans"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 3004,
+                "n_envs": 1,
+            },
+            {
+                "task": "Fold the Suit",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/dual_arm/Fold_the_Suit"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 2926,
+                "n_envs": 1,
+            },
+            {
+                "task": "Fold the T-shirt",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/dual_arm/Fold_the_T-shirt"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 3136,
+                "n_envs": 1,
+            },
+            {
+                "task": "Open Double Door Cabinet",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/dual_arm/Open_Double_Door_Cabinet"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 2569,
+                "n_envs": 1,
+            },
+            {
+                "task": "Open Double Door Shoe Cabinet",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/dual_arm/Open_Double_Door_Shoe_Cabinet"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 1809,
+                "n_envs": 1,
+            },
+            {
+                "task": "Pack Skincare Products",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/dual_arm/Pack_Skincare_Products"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 2539,
+                "n_envs": 1,
+            },
+            {
+                "task": "Place Pot on Induction Cooktop",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/dual_arm/Place_Pot_on_Induction_Cooktop"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 3323,
+                "n_envs": 1,
+            },
+            {
+                "task": "Place Shoes and Close Shoe Cabinet",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/dual_arm/Place_Shoes_and_Close_Shoe_Cabinet"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 2035,
+                "n_envs": 1,
+            },
+            {
+                "task": "Pour Water into Teacup",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/dual_arm/Pour_Water_into_Teacup"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 4244,
+                "n_envs": 1,
+            },
+            {
+                "task": "Put Books into Schoolbag",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/dual_arm/Put_Books_into_Schoolbag"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 1265,
+                "n_envs": 1,
+            },
+            {
+                "task": "Put Clothes into Laundry Hamper",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/dual_arm/Put_Clothes_into_Laundry_Hamper"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 2974,
+                "n_envs": 1,
+            },
+            {
+                "task": "Put Food into Electric Oven",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/dual_arm/Put_Food_into_Electric_Oven"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 1740,
+                "n_envs": 1,
+            },
+            {
+                "task": "Put Food into Microwave",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/dual_arm/Put_Food_into_Microwave"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 2161,
+                "n_envs": 1,
+            },
+            {
+                "task": "Take Bottle and Close Double Doors",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/dual_arm/Take_Bottle_and_Close_Double_Doors"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 2161,
+                "n_envs": 1,
+            },
+            {
+                "task": "Take Bottle and Place on Coaster",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/dual_arm/Take_Bottle_and_Place_on_Coaster"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 2227,
+                "n_envs": 1,
+            },
+            {
+                "task": "Unplug the Power Strip",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/IPEC-COMMUNITY/FastUMI_100k_lerobot/tree/main/dual_arm/Unplug_the_Power_Strip"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_envs": 1,
+                "notes": "Metadata incomplete; video data present but info.json unavailable."
+            },
+
             {
                 "Project": "Data Scaling Laws",
                 "Project Link": "https://data-scaling-laws.github.io/",
+                "release_date": "2024-10-24",
                 "contact": ["lfq24@mails.tsinghua.edu.cn", "huyd21@mails.tsinghua.edu.cn"],
                 "license": "MIT",
                 "citation": `@article{lin2024data,
@@ -1363,6 +1749,7 @@
             {
                 "Project": "UMI on Legs",
                 "Project Link": "https://umi-on-legs.github.io/",
+                "release_date": "2024-07-14",
                 "task": "Kettlebell Pushing",
                 "data_links": {
                     "MP4": "https://real.stanford.edu/umi-on-legs/pushing_2024_05_29_huy/",
@@ -1381,10 +1768,22 @@
   booktitle={Proceedings of the 2024 Conference on Robot Learning},
 }`
             },
-
+            {
+                "task": "Tennis Ball Basket Toss",
+                "data_links": {
+                    "MP4": "https://real.stanford.edu/umi-on-legs/tossing/",
+                    "Zarr": "https://real.stanford.edu/umi-on-legs/tossing.zarr.zip"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 500,
+                "n_envs": 1,
+                "license": "MIT",
+            },
             {
                 "Project": "ManiWAV",
                 "Project Link": "https://mani-wav.github.io/",
+                "release_date": "2024-06-27",
                 "task": "Whiteboard Shape Wipe",
                 "data_links": {
                     "Zarr": "https://real.stanford.edu/maniwav/data/wipe/replay_buffer.zarr.zip"
@@ -1451,6 +1850,7 @@
             {
                 "Project": "UMI",
                 "Project Link": "https://umi-gripper.github.io/",
+                "release_date": "2024-02-15",
                 "task": "Bimanual Dish Washing",
                 "data_links": {
                     "Zarr": "https://real.stanford.edu/umi/data/dish_washing/bimanual_dish_washing.zarr.zip",
@@ -1768,6 +2168,15 @@
                     </p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Dataset Statistics Section -->
+    <section class="section is-small" id="stats">
+        <div class="container is-max-desktop has-text-centered">
+            <figure class="image" style="max-width: 70%; margin: 0 auto;">
+                <img src="plots/stat.png" alt="UMI Dataset Statistics">
+            </figure>
         </div>
     </section>
 
