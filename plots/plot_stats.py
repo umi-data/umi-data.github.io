@@ -1,6 +1,7 @@
 import os
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
+import matplotlib.ticker as mticker
 from datetime import datetime, timedelta
 import numpy as np
 from interactive_annotate import apply_config
@@ -71,16 +72,18 @@ ax.grid(True, linestyle="--", alpha=0.4, color="#cccccc")
 ax.set_axisbelow(True)
 
 ax.xaxis.set_major_formatter(mdates.DateFormatter("%b'%y"))
-ax.xaxis.set_major_locator(mdates.MonthLocator(bymonth=[1, 4, 7, 10]))
+ax.xaxis.set_major_locator(mdates.MonthLocator(bymonth=[1, 7]))
 plt.xticks(fontfamily=MONO, fontsize=18, fontweight="bold")
 plt.yticks(fontfamily=MONO, fontsize=18)
 
-ax.set_ylabel("Thousands of Demos", fontsize=22, fontweight="bold", fontfamily=MONO)
+ax.set_ylabel("Number of Demos", fontsize=22, fontweight="bold", fontfamily=MONO)
 ax.set_title("Cumulative UMI Demos over Time     ",
              fontsize=28, fontweight="bold", fontfamily=MONO, pad=20)
 
 x_max = dates[-1] + timedelta(days=120)
 ax.set_yscale("log")
+ax.yaxis.set_major_formatter(mticker.FuncFormatter(
+    lambda y, _: rf"$10^{{{int(round(np.log10(y))) + 3}}}$" if y > 0 else ""))
 ax.set_xlim(t0, x_max)
 ax.set_ylim(min(plot_cum) * 0.5, max(cumulative) / 1000 * 2.0)
 
