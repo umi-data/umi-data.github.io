@@ -34,6 +34,7 @@ import numpy as np
 CONFIG_FILE = "plots/annotation_config.json"
 
 # ── Data ─────────────────────────────────────────────────────────────────────
+
 projects = [
     ("UMI",                "2024-02-15", 258 + 249 + 284 + 305 + 1447),
     ("ManiWav",            "2024-06-27", 119 + 283 + 145 + 193 + 274),
@@ -59,6 +60,7 @@ projects = [
     ("HuMI",               "2026-02-06", 103+105+105+104+410),
     ("TAMEn",              "2026-04-24", 271+159+148+146),
     ("UMI-3D",             "2026-04-24", 3500+769+340),
+    ("GenRobot",           "2026-04-14", 789772),
 ]
 
 projects   = sorted(projects, key=lambda x: x[1])
@@ -66,7 +68,7 @@ NAMES      = [p[0] for p in projects]
 DATES      = [datetime.strptime(p[1], "%Y-%m-%d") for p in projects]
 DEMOS      = [p[2] for p in projects]
 CUMULATIVE = np.cumsum(DEMOS)
-CY         = [v / 1000 for v in CUMULATIVE]
+CY         = CUMULATIVE
 T0         = datetime(2024, 1, 15)
 
 PRIMARY = "#5469d4"
@@ -212,8 +214,8 @@ class AnnotationEditor:
         self.fig, self.ax = plt.subplots(figsize=(14, 9), facecolor="white")
         self.ax.set_facecolor("white")
 
-        plot_dates = [T0] + DATES
-        plot_cum   = [0.0] + CY
+        plot_dates = DATES
+        plot_cum   = [v / 1000 for v in CY]
         self.ax.plot(plot_dates, plot_cum, color=PRIMARY, linewidth=3,
                      zorder=2, solid_capstyle="round")
         self.ax.scatter(DATES, CY, color=PRIMARY, s=80,
@@ -229,13 +231,14 @@ class AnnotationEditor:
         self.ax.xaxis.set_major_locator(mdates.MonthLocator(bymonth=[1, 4, 7, 10]))
         plt.xticks(fontfamily=MONO, fontsize=18, fontweight="bold")
         plt.yticks(fontfamily=MONO, fontsize=18)
-        self.ax.set_ylabel("Thousands of Demos", fontsize=22,
+        self.ax.set_ylabel("Number of Demos", fontsize=22,
                            fontweight="bold", fontfamily=MONO)
         self.ax.set_title("Cumulative UMI Demos over Time",
                           fontsize=28, fontweight="bold", fontfamily=MONO, pad=20)
         x_max = DATES[-1] + timedelta(days=120)
+        self.ax.set_yscale("log")
         self.ax.set_xlim(T0, x_max)
-        self.ax.set_ylim(0, max(CUMULATIVE) / 1000 * 1.18)
+        self.ax.set_ylim(min(plot_cum) * 0.5, max(CUMULATIVE) * 2.0 / 1000)
 
         # Buttons
         self.fig.subplots_adjust(bottom=0.09)

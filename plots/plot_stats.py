@@ -33,6 +33,7 @@ projects = [
     ("HuMI",               "2026-02-06", 103+105+105+104+410),
     ("TAMEn",              "2026-04-24", 271+159+148+146),
     ("UMI-3D",             "2026-04-24", 3500+769+340),
+    ("GenRobot",           "2026-04-14", 789772),
 ]
 
 projects   = sorted(projects, key=lambda x: x[1])
@@ -42,8 +43,8 @@ demos      = [p[2] for p in projects]
 cumulative = np.cumsum(demos)
 
 t0         = datetime(2024, 1, 15)
-plot_dates = [t0] + dates
-plot_cum   = [0.0] + [v / 1000 for v in cumulative]
+plot_dates = dates
+plot_cum   = [v / 1000 for v in cumulative]
 
 # ── Style ─────────────────────────────────────────────────────────────────────
 PRIMARY = "#5469d4"
@@ -79,8 +80,9 @@ ax.set_title("Cumulative UMI Demos over Time     ",
              fontsize=28, fontweight="bold", fontfamily=MONO, pad=20)
 
 x_max = dates[-1] + timedelta(days=120)
+ax.set_yscale("log")
 ax.set_xlim(t0, x_max)
-ax.set_ylim(0, max(cumulative) / 1000 * 1.05)
+ax.set_ylim(min(plot_cum) * 0.5, max(cumulative) / 1000 * 2.0)
 
 # ═══════════════════════════════════════════════════════════════════════════════
 #  Smart annotation layout
