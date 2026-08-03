@@ -23,7 +23,45 @@
     <script>hljs.highlightAll();</script>
     <script>
         let rows = [
-        
+
+            // Behavior Prompting Policy
+            {
+                "Project": "Behavior Prompting Policy: Demonstrations as Prompts for Manipulation",
+                "Project Link": "https://behavior-prompting.github.io/",
+                "release_date": "2026-06-29",
+                "contact": ["auspatel@stanford.edu"],
+                "license": "MIT",
+                "citation": `@article{patel2026bpp,
+  title={Behavior Prompting Policy: Demonstrations as Prompts for Manipulation},
+  author={Austin Patel and Ben Pekarek and Joel Enrique Castro Hernandez and Shuran Song},
+  year={2026},
+  journal={arXiv preprint arXiv:2606.30457},
+  url={https://arxiv.org/abs/2606.30457}
+}`,
+                "task": "Sweater Folding",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/austinpatel/iphumi_bimanual_laundry_folding/blob/main/sweater_folding_replay_buffer.zarr.zip",
+                    "Raw Data": "https://huggingface.co/datasets/austinpatel/iphumi_bimanual_laundry_folding/blob/main/sweater_folding_raw_data.zip"
+                },
+                "obs": ["Image", "Proprio", "Bimanual"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 1176,
+                "n_envs": 1,
+                "notes": "Collected with <a href=\"https://github.com/real-stanford/iPhUMI\">iPhUMI</a>, an iPhone-based UMI (iPhone in place of GoPro). 3 sub-tasks: left-arm fold (462), right-arm fold (459), fold-up (255). Each gripper collects both main and ultrawide iPhone camera. See the <a href=\"https://github.com/real-stanford/behavior_prompting/blob/main/docs/laundry_folding.md\">task documentation</a> for details."
+            },
+            {
+                "task": "Whiteboard Drawing",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/austinpatel/iphumi_drawinganything_real/blob/main/drawanything_real_replay_buffer.zarr.zip"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Marker Attachment"],
+                "n_demos": 5788,
+                "n_envs": 1,
+                "license": "MIT",
+                "notes": "Single-arm whiteboard drawing collected with <a href=\"https://github.com/real-stanford/iPhUMI\">iPhUMI</a>. Uses a custom attachment holding a whiteboard marker (the gripper is held fully closed) instead of a parallel gripper. 1,000 unique drawings, ~5-6 demos each; main and ultrawide iPhone cameras. See the <a href=\"https://github.com/real-stanford/behavior_prompting/blob/main/docs/drawanything_real.md\">task documentation</a> for details."
+            },
+
             // GenRobot
             {
                 "Project": "GenRobot",
@@ -2224,7 +2262,7 @@ year={2025}
                     <br>
                     <h2 class="subtitle">
                         <strong>The best part?</strong>
-                        With just a GoPro and a 3D printed gripper, any new robot platform can get up and running with
+                        With just a GoPro (or <a href="https://github.com/real-stanford/iPhUMI">iPhone</a>) and a 3D printed gripper, any new robot platform can get up and running with
                         UMI policies without any robot-specific data collection!
                     </h2>
                 </div>
@@ -2236,7 +2274,7 @@ year={2025}
                     <br>
                     <p>
                         <strong>The best part?</strong>
-                        With just a GoPro and a 3D printed gripper, any new robot platform can get up and running with
+                        With just a GoPro (or <a href="https://github.com/real-stanford/iPhUMI">iPhone</a>) and a 3D printed gripper, any new robot platform can get up and running with
                         UMI policies without any robot-specific data collection!
                     </p>
                 </div>
@@ -2273,7 +2311,7 @@ year={2025}
                         don't follow the same hardware or data format.
                         UMI is a constantly evolving design, and welcome enhancements like new sensor modalities (e.g.,
                         <a href="https://mani-wav.github.io/">ManiWav</a>),
-                        finger designs, or cameras (e.g., <a href="https://fastumi.com/">fastUMI</a>).
+                        finger designs, cameras (e.g., <a href="https://fastumi.com/">fastUMI</a>), or improved 6DoF tracking (e.g., <a href="https://github.com/real-stanford/iPhUMI">iPhUMI</a>).
                         Even if your data is not directly transferable to the current UMI setup, it can still be useful
                         for
                         pretraining or other creative applications.
