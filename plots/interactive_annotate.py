@@ -61,7 +61,7 @@ projects = [
     ("TAMEn",              "2026-04-24", 271+159+148+146),
     ("UMI-3D",             "2026-04-24", 3500+769+340),
     ("GenRobot",           "2026-04-14", 789772),
-    ("Behavior Prompting", "2026-06-29", 1176+5788),
+    ("Behavior Prompting", "2026-06-29", 1572+5788),
 ]
 
 projects   = sorted(projects, key=lambda x: x[1])
