@@ -138,5 +138,12 @@
     "y_txt": 953.099,
     "ha": "left",
     "va": "center"
+  },
+  {
+    "name": "AetheRock",
+    "x_txt": "2026-08-20T00:00:00",
+    "y_txt": 380.0,
+    "ha": "center",
+    "va": "top"
   }
 ]

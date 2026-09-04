@@ -24,6 +24,140 @@
     <script>
         let rows = [
 
+            // AetheRock
+            {
+                "Project": "AetheRock: An Arm-Worn Robot Teaching System for Force-Guided Vision-Tactile Learning",
+                "Project Link": "https://lihongcs.github.io/aetherock/index.html",
+                "release_date": "2026-06-08",
+                "contact": ["hong_li@sjtu.edu.cn"],
+                "license": "CC BY 4.0",
+                "citation": `@article{li2026aetherock,
+  title={AetheRock: An Arm-Worn Robot Teaching System for Force-Guided Vision-Tactile Learning},
+  author={Li, Hong and Xu, Yue and Tang, Yihan and Dong, Yankang and Liu, Chenyuan and Yu, Chenyang and Li, Xuyang and Huang, Siyuan and Shen, Yujun and Xue, Nan and others},
+  journal={arXiv preprint arXiv:2606.09777},
+  year={2026}
+}`,
+                "task": "Bread Moving",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/lihong-cs/aetherock/blob/main/bread_moving/bread_moving.zarr.zip"
+                },
+                "obs": ["Image", "Tactile", "Proprio", "Force/Torque"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 199,
+                "n_envs": 1,
+                "notes": "Collected with AetheRock, an arm-worn teaching system recording synchronized wrist RGB images, bilateral tactile images, force signals, end-effector poses, and gripper states. Data is stored as one Zarr ZIP archive per task (also mirrored on <a href=\"https://modelscope.cn/datasets/lihongcs/aetherock\">ModelScope</a>). Task names follow the archive directory names in the dataset."
+            },
+            {
+                "task": "Clamp Seal",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/lihong-cs/aetherock/blob/main/clamp_seal/clamp_seal.zarr.zip"
+                },
+                "obs": ["Image", "Tactile", "Proprio", "Force/Torque"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 229,
+                "n_envs": 1,
+                "license": "CC BY 4.0"
+            },
+            {
+                "task": "Close Bottle",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/lihong-cs/aetherock/blob/main/close_bottle/close_bottle.zarr.zip"
+                },
+                "obs": ["Image", "Tactile", "Proprio", "Force/Torque"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 497,
+                "n_envs": 1,
+                "license": "CC BY 4.0"
+            },
+            {
+                "task": "Erase Board",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/lihong-cs/aetherock/blob/main/erase_board/erase_board.zarr.zip"
+                },
+                "obs": ["Image", "Tactile", "Proprio", "Force/Torque"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 498,
+                "n_envs": 1,
+                "license": "CC BY 4.0"
+            },
+            {
+                "task": "Erase Board (eraseboard)",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/lihong-cs/aetherock/blob/main/eraseboard/eraseboard.zarr.zip"
+                },
+                "obs": ["Image", "Tactile", "Proprio", "Force/Torque"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 215,
+                "n_envs": 1,
+                "license": "CC BY 4.0"
+            },
+            {
+                "task": "Peg Flowers",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/lihong-cs/aetherock/blob/main/peg_flowers/peg_flowers.zarr.zip"
+                },
+                "obs": ["Image", "Tactile", "Proprio", "Force/Torque"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 212,
+                "n_envs": 1,
+                "license": "CC BY 4.0"
+            },
+            {
+                "task": "Screw",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/lihong-cs/aetherock/blob/main/screw/screw.zarr.zip"
+                },
+                "obs": ["Image", "Tactile", "Proprio", "Force/Torque"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 501,
+                "n_envs": 1,
+                "license": "CC BY 4.0"
+            },
+            {
+                "task": "Stirring",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/lihong-cs/aetherock/blob/main/stiring/stiring.zarr.zip"
+                },
+                "obs": ["Image", "Tactile", "Proprio", "Force/Torque"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 497,
+                "n_envs": 1,
+                "license": "CC BY 4.0"
+            },
+            {
+                "task": "Stowing",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/lihong-cs/aetherock/blob/main/stowing/stowing.zarr.zip"
+                },
+                "obs": ["Image", "Tactile", "Proprio", "Force/Torque"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 496,
+                "n_envs": 1,
+                "license": "CC BY 4.0"
+            },
+            {
+                "task": "Towel Hanging",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/lihong-cs/aetherock/blob/main/towel_hanging/towel_hanging.zarr.zip"
+                },
+                "obs": ["Image", "Tactile", "Proprio", "Force/Torque"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 206,
+                "n_envs": 1,
+                "license": "CC BY 4.0"
+            },
+            {
+                "task": "Yellow to Pink",
+                "data_links": {
+                    "Zarr": "https://huggingface.co/datasets/lihong-cs/aetherock/blob/main/yellow_to_pink/yellow_to_pink.zarr.zip"
+                },
+                "obs": ["Image", "Tactile", "Proprio", "Force/Torque"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 214,
+                "n_envs": 1,
+                "license": "CC BY 4.0"
+            },
+
             // Behavior Prompting Policy
             {
                 "Project": "Behavior Prompting Policy: Demonstrations as Prompts for Manipulation",
