@@ -37,6 +37,7 @@ projects = [
     ("GenRobot",           "2026-04-14", 789772),
     ("Behavior Prompting", "2026-06-29", 1572+5788),
     ("AetheRock",          "2026-06-08", 199+229+497+498+215+212+501+497+496+206+214),
+    ("HiFi-UMI-2K",        "2026-07-28", 482000),
 ]
 
 projects   = sorted(projects, key=lambda x: x[1])

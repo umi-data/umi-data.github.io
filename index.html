@@ -24,6 +24,30 @@
     <script>
         let rows = [
 
+            // HiFi-UMI-2K
+            {
+                "Project": "HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone",
+                "Project Link": "https://cloud.simpleai.tech/simple-world-lab/hifi-umi/",
+                "release_date": "2026-07-28",
+                "contact": ["pr@simpleai.tech"],
+                "license": "CC BY 4.0",
+                "citation": `@article{simpleai2026hifiumi,
+  title   = {HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone},
+  author  = {{Simple AI} and Wei, Yuteng and Ma, Jinming and Wang, Jiawei and Zhou, Weitao and Zuo, Yushen and Rui, Ke and Li, Minglei and Zhang, Jinhao and Pan, Zhikang and Wang, Xiang and Jia, Haoran and Du, Huan and Zeng, Zicheng and Ma, Jun and Qin, Guiyu and Zhang, Di and Li, Xiaofei},
+  journal = {arXiv preprint arXiv:2607.25895},
+  year    = {2026}
+}`,
+                "task": "Diverse",
+                "data_links": {
+                    "LeRobot": "https://huggingface.co/datasets/simple-world-lab/HiFi-UMI-2K"
+                },
+                "obs": ["Image", "Proprio", "Bimanual"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper", "Bimanual"],
+                "n_demos": 482000,
+                "n_envs": "110+",
+                "notes": "HiFi-UMI-2K is a 2,000-hour public release (482k+ episodes, 110+ scenes) collected with the HiFi-UMI bimanual capture system, a curated subset of a 20,000+ hour source corpus. Each episode has six hardware-synchronized camera views (stereo head cameras plus two fisheye cameras per hand), bimanual end-effector trajectories with ~3 mm local accuracy, gripper states, and language annotations. Distributed in LeRobot v3-style format (Parquet + MP4). Paper: <a href=\"https://arxiv.org/abs/2607.25895\">arXiv:2607.25895</a>."
+            },
+
             // AetheRock
             {
                 "Project": "AetheRock: An Arm-Worn Robot Teaching System for Force-Guided Vision-Tactile Learning",

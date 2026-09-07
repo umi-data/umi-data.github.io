@@ -145,5 +145,12 @@
     "y_txt": 380.0,
     "ha": "center",
     "va": "top"
+  },
+  {
+    "name": "HiFi-UMI-2K",
+    "x_txt": "2026-09-05T00:00:00",
+    "y_txt": 2100.0,
+    "ha": "left",
+    "va": "center"
   }
 ]
