@@ -98,6 +98,13 @@
     "va": "center"
   },
   {
+    "name": "FreeTacMan",
+    "x_txt": "2025-12-01T00:00:00",
+    "y_txt": 280.0,
+    "ha": "center",
+    "va": "bottom"
+  },
+  {
     "name": "ViTaMIn-B",
     "x_txt": "2026-01-10T21:47:30",
     "y_txt": 67.33189401011629,
@@ -106,10 +113,10 @@
   },
   {
     "name": "HuMI",
-    "x_txt": "2025-12-06T08:32:01",
-    "y_txt": 260.4111636663217,
-    "ha": "center",
-    "va": "bottom"
+    "x_txt": "2026-03-12T00:00:00",
+    "y_txt": 257.0,
+    "ha": "left",
+    "va": "center"
   },
   {
     "name": "CAP",

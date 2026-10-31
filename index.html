@@ -622,6 +622,569 @@ year={2025}
                 "n_demos": 181,
                 "n_envs": 1,
             },
+            // FreeTacMan
+            {
+                "Project": "FreeTacMan: Robot-free Visuo-Tactile Data Collection System for Contact-rich Manipulation",
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "release_date": "2025-10-29",
+                "contact": ["im.longyanwu@gmail.com"],
+                "license": "MIT",
+                "citation": `@article{wu2025freetacman,
+  title={FreeTacMan: Robot-free visuo-tactile data collection system for contact-rich manipulation},
+  author={Wu, Longyan and Yu, Checheng and Ren, Jieji and Chen, Li and Jiang, Yufei and Huang, Ran and Gu, Guoying and Li, Hongyang},
+  journal={IEEE International Conference on Robotics and Automation},
+  year={2026}
+}`,
+                "task": "Arrange Fruit",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/ArrangeFruit"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 208,
+                "n_envs": "N/A",
+                "notes": "6,428 trajectories across 46 contact-rich tasks released on Hugging Face (ICRA 2026). Collected robot-free with a handheld gripper carrying two visuo-tactile sensors and a wrist fisheye camera; the end-effector pose comes from motion capture. Each trajectory is three MP4s (two tactile, one wrist) plus a CSV with TCP pose and gripper distance. Code: <a href=\"https://github.com/OpenDriveLab/FreeTacMan\">GitHub</a>. Mirror: <a href=\"https://www.modelscope.cn/datasets/OpenDriveLab/FreeTacMan\">ModelScope</a>."
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Cake Piping",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/CakePiping"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 48,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Cast",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/Cast"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 104,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Cut Banana",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/CutBanana"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 51,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Cut Tofu",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/CutTofu"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 6,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Decorate Cake",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/DecorateCake"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 151,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Dense Packing",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/DensePacking"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 67,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Feel Weight",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/FeelWeight"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 115,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Fragile Cup",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/FragileCup"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 200,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Hammer",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/Hammer"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 117,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Hang Mosquito Coil",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/HangMosquitoCoil"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 97,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Hold",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/Hold"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 58,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Insert Incense Stick",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/InsertIncenseStick"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 206,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Layer With Banana Slices",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/LayerWithBananaSlices"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 53,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Mount",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/Mount"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 221,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Organize Brush",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/OrganizeBrush"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 207,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Pipette",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/Pipette"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 154,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Pound",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/Pound"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 104,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Pour Water",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/PourWater"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 237,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Pull Drawer",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/PullDrawer"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 106,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Screw In The Bulb",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/ScrewInTheBulb"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 172,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Slot",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/Slot"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 204,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Spread Cream",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/SpreadCream"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 63,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Sprinkle Sesame",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/SprinkleSesame"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 186,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Squeeze Toothpaste",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/SqueezeToothpaste"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 179,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Stamp",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/Stamp"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 200,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Steak Saucing",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/SteakSaucing"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 101,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Stir",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/Stir"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 107,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Store Fruit",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/StoreFruit"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 55,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Store Toys",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/StoreToys"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 84,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "String Beads",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/StringBeads"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 56,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Swipe Card",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/SwipeCard"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 162,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Texture Classify",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/TextureClassify"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 200,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Thread Needle",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/ThreadNeedle"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 53,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Throw",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/Throw"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 192,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Tissue Grasp",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/TissueGrasp"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 129,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Transfer Egg",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/TransferEgg"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 124,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Transfer Herbs",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/TransferHerbs"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 64,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Unscrew Light Bulb",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/UnscrewLightBulb"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 52,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Unzip",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/Unzip"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 111,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "USB Plug",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/UsbPlug"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 611,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "USB Plug (Many Envs)",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/UsbPlugManyEnv"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 210,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Use Tweezer",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/UseTweezer"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 109,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Watering Plants",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/WateringPlants"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 90,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Wipe Board",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/WipeBoard"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 205,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
+            {
+                "Project Link": "https://opendrivelab.com/FreeTacMan",
+                "task": "Write",
+                "data_links": {
+                    "MP4": "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan/tree/main/Write"
+                },
+                "obs": ["Image", "Proprio", "Tactile"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 199,
+                "n_envs": "N/A",
+                "license": "MIT",
+            },
             // MV-UMI
             {
                 "Project": "MV-UMI: A Scalable Multi-View Interface for Cross-Embodiment Learning",
