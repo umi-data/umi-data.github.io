@@ -352,6 +352,54 @@
                 "n_envs": 1,
                 "license": "CC BY 4.0",
             },
+            // Contact-Anchored Policies (CAP)
+            {
+                "Project": "Contact-Anchored Policies: Contact Conditioning Creates Strong Robot Utility Models",
+                "Project Link": "https://cap-policy.github.io/",
+                "release_date": "2026-02-09",
+                "contact": ["jeff.cui@nyu.edu"],
+                "license": "MIT",
+                "citation": `@article{cui2026contact,
+  title={Contact-Anchored Policies: Contact Conditioning Creates Strong Robot Utility Models},
+  author={Zichen Jeff Cui and Omar Rayyan and Haritheja Etukuru and Bowen Tan and Zavier Andrianarivo and Zicheng Teng and Yihang Zhou and Krish Mehta and Nicholas Wojno and Kevin Yuanbo Wu and Manan H Anjaria and Ziyuan Wu and Manrong Mao and Guangxun Zhang and Binit Shah and Yejin Kim and Soumith Chintala and Lerrel Pinto and Nur Muhammad Mahi Shafiullah},
+  journal={arXiv preprint arXiv:2602.09017},
+  year={2026}
+}`,
+                "task": "Pick",
+                "data_links": {
+                    "Raw Data": "https://huggingface.co/datasets/zavierand/CAPs/tree/main/dataset_raw/Pick"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 14606,
+                "n_envs": 289,
+                "notes": "20,365 demos (23.1 h) across 424 environments, collected with a handheld 3D-printed gripper and a rigidly mounted iPhone (AnySense app: RGB and 6 DoF ARKit pose at 30 Hz). Each demo is an MP4 plus a labels.json with per-frame pose, gripper aperture and the 2D/3D contact anchor the policy is conditioned on. The Open and Close folders on Hugging Face also contain horizontally mirrored copies of every demo. Code: <a href=\"https://github.com/jeffacce/cap-policy\">GitHub</a>."
+            },
+            {
+                "Project Link": "https://cap-policy.github.io/",
+                "task": "Open",
+                "data_links": {
+                    "Raw Data": "https://huggingface.co/datasets/zavierand/CAPs/tree/main/dataset_raw/Open"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 3690,
+                "n_envs": 87,
+                "license": "MIT",
+                "notes": "Drawers and cabinet doors."
+            },
+            {
+                "Project Link": "https://cap-policy.github.io/",
+                "task": "Close",
+                "data_links": {
+                    "Raw Data": "https://huggingface.co/datasets/zavierand/CAPs/tree/main/dataset_raw/Close"
+                },
+                "obs": ["Image", "Proprio"],
+                "actions": ["6 DoF End Effector", "Parallel Gripper"],
+                "n_demos": 2069,
+                "n_envs": 48,
+                "license": "MIT",
+            },
             // HuMI
             {
                 "Project": "HuMI",
