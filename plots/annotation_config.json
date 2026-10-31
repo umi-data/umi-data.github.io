@@ -119,9 +119,9 @@
     "va": "center"
   },
   {
-    "name": "TAMEn",
+    "name": "BiTacMan",
     "x_txt": "2026-06-07T16:44:23",
-    "y_txt": 612.243091079189,
+    "y_txt": 560.0,
     "ha": "center",
     "va": "top"
   },
@@ -141,10 +141,10 @@
   },
   {
     "name": "AetheRock",
-    "x_txt": "2026-08-20T00:00:00",
-    "y_txt": 380.0,
-    "ha": "center",
-    "va": "top"
+    "x_txt": "2026-09-01T00:00:00",
+    "y_txt": 620.0,
+    "ha": "left",
+    "va": "center"
   },
   {
     "name": "HiFi-UMI-2K",
